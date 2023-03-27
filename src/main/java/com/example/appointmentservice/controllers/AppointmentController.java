@@ -18,7 +18,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Map;
 
 
 @RequestMapping("api/v1/appointments")
@@ -65,6 +67,17 @@ public class AppointmentController {
         List<AppointmentDto> appointments = appointmentViewService.getAppointmentsOfCurrentWeek(week, role, userId);
         return new ResponseEntity<>(appointments, HttpStatus.OK);
     }
+
+//    @GetMapping("/appointments/{week}")
+//    public ResponseEntity<Map<LocalDateTime, AppointmentDto>> getAppointmentsWithNulls(@PathVariable Integer week, String role, Long userId){
+//        Map<LocalDateTime, AppointmentDto> appointments = appointmentViewService.getListOfAppointmentsWithNulls(week, role, userId);
+//        return new ResponseEntity<>(appointments, HttpStatus.OK);
+//    }
+    @GetMapping("/{id}")
+    public ResponseEntity<AppointmentDto> getAppointmentById(@PathVariable Long id){
+        return new ResponseEntity<>(appointmentViewService.getAppointmentById(id), HttpStatus.OK);
+    }
+
 
 
 

@@ -9,4 +9,6 @@ public interface AppointmentDetailService {
     AppointmentDetailDto createAppointmentDetail(Long appointmentId);
 
     void deleteAppointmentDetail(Long appointmentId);
+
+    AppointmentDetailDto getAppointmentDetailByAppointmentId(Long id);
 }

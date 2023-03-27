@@ -28,7 +28,7 @@ public class AppointmentServiceImpl implements AppointmentService {
     private final AppointmentDetailService appointmentDetailService;
     @Override
     public AppointmentDto createNewAppointment(AppointmentRequest appointmentRequest) {
-        int hour = Integer.parseInt(appointmentRequest.getStartHour());
+        int hour = Integer.parseInt( appointmentRequest.getStartHour() );
         LocalDateTime startDate = LocalDateTime.of(
                 LocalDate.parse(appointmentRequest.getStartDate(), DateTimeFormatter.ofPattern("dd-MM-yyyy")),
                 LocalTime.of(hour,0,0)
@@ -39,6 +39,7 @@ public class AppointmentServiceImpl implements AppointmentService {
                 .startTime(startDate)
                 .appointmentType(AppointmentType.valueOf(appointmentRequest.getAppointmentType().toUpperCase()))
                 .build();
+
         log.info("Appointment was build {}", appointmentDto);
         AppointmentDto appointmentDtoSaved = appointmentMapper.entityToDto(
                 appointmentRepository.save(
