@@ -11,4 +11,6 @@ public interface AppointmentDetailService {
     void deleteAppointmentDetail(Long appointmentId);
 
     AppointmentDetailDto getAppointmentDetailByAppointmentId(Long id);
+
+    AppointmentDetailDto changeStatusToFinished(Long appointmentId);
 }

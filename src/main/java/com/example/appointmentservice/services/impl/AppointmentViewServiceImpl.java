@@ -42,7 +42,7 @@ public class AppointmentViewServiceImpl implements AppointmentViewService {
         }
 
         return thisWeekAppointments.stream()
-                .map( appointmentEntityMapper::entityToDto)
+                .map( appointmentEntityMapper::entityToDto )
                 .toList();
 
     }

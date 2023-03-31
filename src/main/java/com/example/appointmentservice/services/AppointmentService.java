@@ -18,4 +18,6 @@ public interface AppointmentService {
     void cancelAppointmentFromProviderSide(Long appointmentId);
 
     AppointmentDto cancelAppointmentFromClientSide(Long appointmentId);
+
+    Boolean isBeforeNow(Long id);
 }

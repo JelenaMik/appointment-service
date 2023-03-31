@@ -30,20 +30,17 @@ public class AppointmentServiceImpl implements AppointmentService {
     public AppointmentDto createNewAppointment(AppointmentRequest appointmentRequest) {
         int hour = Integer.parseInt( appointmentRequest.getStartHour() );
         LocalDateTime startDate = LocalDateTime.of(
-                LocalDate.parse(appointmentRequest.getStartDate(), DateTimeFormatter.ofPattern("dd-MM-yyyy")),
+                LocalDate.parse(appointmentRequest.getStartDate(), DateTimeFormatter.ofPattern("yyyy-MM-dd")),
                 LocalTime.of(hour,0,0)
         );
 
-        AppointmentDto appointmentDto = AppointmentDto.builder()
-                .providerId(appointmentRequest.getProviderId())
-                .startTime(startDate)
-                .appointmentType(AppointmentType.valueOf(appointmentRequest.getAppointmentType().toUpperCase()))
-                .build();
-
-        log.info("Appointment was build {}", appointmentDto);
-        AppointmentDto appointmentDtoSaved = appointmentMapper.entityToDto(
-                appointmentRepository.save(
-                        appointmentMapper.dtoToEntity(appointmentDto)
+        AppointmentDto appointmentDtoSaved = appointmentMapper.entityToDto (
+                appointmentRepository.save (
+                        AppointmentEntity.builder()
+                                .providerId(appointmentRequest.getProviderId())
+                                .startTime(startDate)
+                                .appointmentType(AppointmentType.valueOf(appointmentRequest.getAppointmentType().toUpperCase()))
+                                .build()
                 ));
         log.info("Appointment was saved {}", appointmentDtoSaved);
 
@@ -82,11 +79,17 @@ public class AppointmentServiceImpl implements AppointmentService {
     @Override
     public AppointmentDto cancelAppointmentFromClientSide(Long appointmentId){
         AppointmentEntity appointment = appointmentRepository.findById(appointmentId).orElseThrow(AppointmentNotFoundException::new);
-        appointment.setClientId(null);
-        appointment.setDetails(null);
+        appointment.setClientId( null );
+        appointment.setDetails( null );
         return appointmentMapper.entityToDto(
                 appointmentRepository.save(appointment)
         );
+    }
+    @Override
+    public Boolean isBeforeNow(Long id){
+        AppointmentEntity appointment = appointmentRepository.findById(id).orElseThrow(AppointmentNotFoundException::new);
+        LocalDateTime startDate = appointment.getStartTime();
+        return startDate.isBefore(LocalDateTime.now()) || startDate.isEqual(LocalDateTime.now());
     }
 
 

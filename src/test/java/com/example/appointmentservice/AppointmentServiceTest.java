@@ -23,7 +23,7 @@ import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.when;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 @ExtendWith(MockitoExtension.class)
-public class AppointmentServiceTest {
+class AppointmentServiceTest {
     @Mock
     private AppointmentRepository appointmentRepository;
     @Mock
@@ -86,7 +86,7 @@ public class AppointmentServiceTest {
     }
 
     @Test
-    public void createAppointmentTest(){
+    void createAppointmentTest(){
 
         when(appointmentMapper.entityToDto(appointmentEntity)).thenReturn(appointmentDto);
         when(appointmentRepository.save(appointmentEntityWithoutId)).thenReturn(appointmentEntity);
