@@ -10,6 +10,8 @@ public interface AppointmentRepository extends JpaRepository<AppointmentEntity, 
 
     List<AppointmentEntity> findAllByClientIdAndStartTimeGreaterThanEqualAndStartTimeLessThanEqualOrderByStartTimeAsc(Long clientId, LocalDateTime from, LocalDateTime to);
     List<AppointmentEntity> findAllByProviderIdAndStartTimeGreaterThanEqualAndStartTimeLessThanEqualOrderByStartTimeAsc(Long providerId, LocalDateTime from, LocalDateTime to);
+    Boolean existsByClientIdAndStartTime(Long clientId, LocalDateTime startTime);
+    Boolean existsByProviderIdAndStartTime(Long providerId, LocalDateTime startTime);
 
 //    findAllByTransactionTypeAndReceiverIdAndTransactionCreateDateGreaterThanEqualAndTransactionCreateDateLessThanEqualOrderByStartTimeAsc(TransactionType.valueOf(transactionType.toUpperCase()), accountId, from, to);
 

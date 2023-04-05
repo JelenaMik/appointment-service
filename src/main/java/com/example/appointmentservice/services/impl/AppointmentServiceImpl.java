@@ -4,17 +4,17 @@ import com.example.appointmentservice.dto.AppointmentDetailDto;
 import com.example.appointmentservice.dto.AppointmentDto;
 import com.example.appointmentservice.dto.AppointmentRequest;
 import com.example.appointmentservice.enums.AppointmentType;
+import com.example.appointmentservice.exceptions.AppointmentHasAlreadyBooked;
 import com.example.appointmentservice.exceptions.AppointmentNotFoundException;
+import com.example.appointmentservice.exceptions.BookingTimeOverlapping;
 import com.example.appointmentservice.mappers.AppointmentEntityMapper;
 import com.example.appointmentservice.repositories.AppointmentRepository;
 import com.example.appointmentservice.repositories.model.AppointmentEntity;
 import com.example.appointmentservice.services.AppointmentDetailService;
 import com.example.appointmentservice.services.AppointmentService;
-import jakarta.validation.constraints.FutureOrPresent;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Service;
-import org.springframework.util.Assert;
 import org.springframework.validation.annotation.Validated;
 
 import java.time.LocalDate;
@@ -30,16 +30,17 @@ public class AppointmentServiceImpl implements AppointmentService {
     private final AppointmentEntityMapper appointmentMapper;
     private final AppointmentDetailService appointmentDetailService;
     @Override
+    @Validated
     public AppointmentDto createNewAppointment(AppointmentRequest appointmentRequest) {
         int hour = Integer.parseInt( appointmentRequest.getStartHour() );
-
-        @FutureOrPresent
 
         LocalDateTime startDate = LocalDateTime.of(
                 LocalDate.parse(appointmentRequest.getStartDate(), DateTimeFormatter.ofPattern("yyyy-MM-dd")),
                 LocalTime.of(hour,0,0)
         );
+        log.info("start date is {}", startDate);
 
+        if(appointmentRepository.existsByProviderIdAndStartTime(appointmentRequest.getProviderId(), startDate)) throw new BookingTimeOverlapping();
 
         AppointmentDto appointmentDtoSaved = appointmentMapper.entityToDto (
                 appointmentRepository.save (
@@ -60,6 +61,8 @@ public class AppointmentServiceImpl implements AppointmentService {
     @Override
     public AppointmentDto bookAppointment(Long clientId, Long appointmentId, String details){
         AppointmentEntity appointment = appointmentRepository.findById(appointmentId).orElseThrow(AppointmentNotFoundException::new);
+        if(appointmentRepository.existsByClientIdAndStartTime(clientId, appointment.getStartTime())) throw new BookingTimeOverlapping();
+        if(appointment.getClientId()!=null) throw new AppointmentHasAlreadyBooked();
         appointment.setClientId(clientId);
         appointment.setDetails(details);
         return appointmentMapper.entityToDto(appointmentRepository.save(appointment));

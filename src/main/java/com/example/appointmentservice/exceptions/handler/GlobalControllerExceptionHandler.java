@@ -1,12 +1,12 @@
 package com.example.appointmentservice.exceptions.handler;
 
+import com.example.appointmentservice.exceptions.AppointmentHasAlreadyBooked;
 import com.example.appointmentservice.exceptions.AppointmentNotFoundException;
+import com.example.appointmentservice.exceptions.BookingTimeOverlapping;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.ConstraintViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.transaction.TransactionSystemException;
-import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
@@ -21,6 +21,19 @@ public class GlobalControllerExceptionHandler {
     protected ResponseEntity handleConflict(AppointmentNotFoundException e, HttpServletRequest request){
         ErrorModel errorModel = new ErrorModel(LocalDate.now(), HttpStatus.BAD_REQUEST,
                 "Bad Request", "No appointment was found", request.getRequestURI());
+        return new ResponseEntity<>(errorModel, HttpStatus.BAD_REQUEST);
+    }
+    @ExceptionHandler(BookingTimeOverlapping.class)
+    protected ResponseEntity handleConflict(BookingTimeOverlapping e, HttpServletRequest request){
+        ErrorModel errorModel = new ErrorModel(LocalDate.now(), HttpStatus.BAD_REQUEST,
+                "Bad Request", "You already have an appointment at selected time", request.getRequestURI());
+        return new ResponseEntity<>(errorModel, HttpStatus.BAD_REQUEST);
+    }
+
+    @ExceptionHandler(AppointmentHasAlreadyBooked.class)
+    protected ResponseEntity handleConflict(AppointmentHasAlreadyBooked e, HttpServletRequest request){
+        ErrorModel errorModel = new ErrorModel(LocalDate.now(), HttpStatus.BAD_REQUEST,
+                "Bad Request", "Appointment has already been booked", request.getRequestURI());
         return new ResponseEntity<>(errorModel, HttpStatus.BAD_REQUEST);
     }
 
