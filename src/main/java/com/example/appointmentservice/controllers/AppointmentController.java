@@ -9,6 +9,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -37,7 +38,7 @@ public class AppointmentController {
         return new ResponseEntity<>(appointmentDto, HttpStatus.CREATED);
     }
     @PutMapping("/book-appointment")
-    public ResponseEntity<AppointmentDto> bookAppointment(Long clientId, Long appointmentId, String details){
+    public ResponseEntity<AppointmentDto> bookAppointment(Long clientId, Long appointmentId, @Validated String details){
         AppointmentDto appointmentDto = appointmentService.bookAppointment(clientId, appointmentId, details);
         return new ResponseEntity<>(appointmentDto, HttpStatus.OK);
     }

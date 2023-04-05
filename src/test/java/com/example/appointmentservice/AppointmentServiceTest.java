@@ -9,17 +9,19 @@ import com.example.appointmentservice.repositories.AppointmentRepository;
 import com.example.appointmentservice.repositories.model.AppointmentEntity;
 import com.example.appointmentservice.services.AppointmentDetailService;
 import com.example.appointmentservice.services.impl.AppointmentServiceImpl;
+import jakarta.validation.ConstraintViolationException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
-import org.reactivestreams.Publisher;
+import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
+import org.springframework.boot.test.context.SpringBootTest;
 
 import java.time.LocalDateTime;
 
-import static org.mockito.Mockito.doNothing;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.Mockito.when;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 @ExtendWith(MockitoExtension.class)
@@ -73,10 +75,17 @@ class AppointmentServiceTest {
 
         appointmentRequest = AppointmentRequest.builder()
                 .providerId(3L)
-                .startDate("20-03-2023")
+                .startDate("2023-03-20")
                 .startHour("8")
                 .appointmentType("office")
                 .build();
+
+//        appointmentRequest = AppointmentRequest.builder()
+//                .providerId(3L)
+//                .startDate("20-03-2023")
+//                .startHour("8")
+//                .appointmentType("office")
+//                .build();
 
         appointmentDetailDto = AppointmentDetailDto.builder()
                 .appointmentDetailId(10L)
@@ -86,20 +95,25 @@ class AppointmentServiceTest {
     }
 
     @Test
-    void createAppointmentTest(){
+    void createAppointmentTestSuccess(){
 
         when(appointmentMapper.entityToDto(appointmentEntity)).thenReturn(appointmentDto);
         when(appointmentRepository.save(appointmentEntityWithoutId)).thenReturn(appointmentEntity);
-        when(appointmentMapper.dtoToEntity(appointmentDtoWithoutId)).thenReturn(appointmentEntityWithoutId);
         when(appointmentDetailService.createAppointmentDetail(1L)).thenReturn(appointmentDetailDto);
 
         var expected = appointmentDto;
         var result = appointmentService.createNewAppointment(appointmentRequest);
 
-
-
         assertEquals(expected, result);
     }
+    @Test
+    void createAppointmentWrongDate(){
+
+        when(appointmentRepository.save(appointmentEntityWithoutId)).thenThrow(ConstraintViolationException.class);
+
+        assertThrows(ConstraintViolationException.class, () -> appointmentService.createNewAppointment(appointmentRequest));
+    }
+
 
 
 

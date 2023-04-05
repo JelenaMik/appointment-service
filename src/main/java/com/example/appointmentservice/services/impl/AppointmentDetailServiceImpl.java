@@ -27,7 +27,6 @@ public class AppointmentDetailServiceImpl implements AppointmentDetailService {
         AppointmentDetailDto appointmentDetailDto = AppointmentDetailDto.builder()
                 .appointmentId(appointmentId)
                 .status(AppointmentStatus.PENDING)
-                .created(LocalDateTime.now())
         .build();
         log.info("appointment details was build {}", appointmentDetailDto);
         AppointmentDetailDto appointmentDetailDtoSaved = appointmentDetailEntityMapper.entityToDto(
