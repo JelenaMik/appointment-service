@@ -33,6 +33,6 @@ public class AppointmentDetailController {
             detailService.changeStatusToFinished(id);
             return new ResponseEntity<>(HttpStatus.OK);
         }
-        return ResponseEntity.ok(HttpStatus.NO_CONTENT);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 }

@@ -21,8 +21,9 @@ public class AppointmentDetailDto {
     private Long appointmentDetailId;
 
     private Long appointmentId;
+
     private AppointmentStatus status;
-    @CreatedDate
+
     @JsonFormat(pattern = "dd-MM-yyyy HH:mm:ss")
     private LocalDateTime created;
 }

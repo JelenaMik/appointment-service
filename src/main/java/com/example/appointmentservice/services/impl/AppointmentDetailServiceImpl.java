@@ -3,6 +3,7 @@ package com.example.appointmentservice.services.impl;
 import com.example.appointmentservice.dto.AppointmentDetailDto;
 import com.example.appointmentservice.dto.AppointmentDto;
 import com.example.appointmentservice.enums.AppointmentStatus;
+import com.example.appointmentservice.exceptions.AppointmentNotFoundException;
 import com.example.appointmentservice.mappers.AppointmentDetailEntityMapper;
 import com.example.appointmentservice.repositories.AppointmentDetailRepository;
 import com.example.appointmentservice.repositories.model.AppointmentDetailEntity;
@@ -39,20 +40,21 @@ public class AppointmentDetailServiceImpl implements AppointmentDetailService {
 
     @Override
     public void deleteAppointmentDetail(Long appointmentId){
-        Long id = appointmentDetailRepository.findByAppointmentId(appointmentId).getAppointmentDetailId();
+        AppointmentDetailEntity appointmentDetail = appointmentDetailRepository.findByAppointmentId(appointmentId).orElseThrow(AppointmentNotFoundException::new);
+        Long id = appointmentDetail.getAppointmentDetailId();
         appointmentDetailRepository.deleteById(id);
     }
 
     @Override
     public AppointmentDetailDto getAppointmentDetailByAppointmentId(Long id){
-        return appointmentDetailEntityMapper.entityToDto(
-                appointmentDetailRepository.findByAppointmentId(id));
+        AppointmentDetailEntity appointmentDetail = appointmentDetailRepository.findByAppointmentId(id).orElseThrow(AppointmentNotFoundException::new);
+        return appointmentDetailEntityMapper.entityToDto(appointmentDetail);
     }
 
     @Override
     public AppointmentDetailDto changeStatusToFinished(Long appointmentId){
         AppointmentDetailEntity appointmentDetail =
-                appointmentDetailRepository.findByAppointmentId(appointmentId);
+                appointmentDetailRepository.findByAppointmentId(appointmentId).orElseThrow(AppointmentNotFoundException::new);
                     appointmentDetail.setStatus(AppointmentStatus.FINISHED);
                     return  appointmentDetailEntityMapper.entityToDto(
                             appointmentDetailRepository.save(appointmentDetail)

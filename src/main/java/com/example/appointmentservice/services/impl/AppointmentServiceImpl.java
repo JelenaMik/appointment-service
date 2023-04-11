@@ -12,6 +12,9 @@ import com.example.appointmentservice.repositories.AppointmentRepository;
 import com.example.appointmentservice.repositories.model.AppointmentEntity;
 import com.example.appointmentservice.services.AppointmentDetailService;
 import com.example.appointmentservice.services.AppointmentService;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.Size;
+import jakarta.validation.executable.ValidateOnExecution;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Service;
@@ -61,6 +64,7 @@ public class AppointmentServiceImpl implements AppointmentService {
     @Override
     public AppointmentDto bookAppointment(Long clientId, Long appointmentId, String details){
         AppointmentEntity appointment = appointmentRepository.findById(appointmentId).orElseThrow(AppointmentNotFoundException::new);
+        log.info("app was found");
         if(appointmentRepository.existsByClientIdAndStartTime(clientId, appointment.getStartTime())) throw new BookingTimeOverlapping();
         if(appointment.getClientId()!=null) throw new AppointmentHasAlreadyBooked();
         appointment.setClientId(clientId);

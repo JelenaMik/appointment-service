@@ -4,12 +4,16 @@ import com.example.appointmentservice.exceptions.AppointmentHasAlreadyBooked;
 import com.example.appointmentservice.exceptions.AppointmentNotFoundException;
 import com.example.appointmentservice.exceptions.BookingTimeOverlapping;
 import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import jakarta.validation.ConstraintViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.transaction.TransactionSystemException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.servlet.ModelAndView;
 
+import java.io.IOException;
 import java.time.LocalDate;
 import java.util.HashMap;
 import java.util.List;
@@ -38,7 +42,9 @@ public class GlobalControllerExceptionHandler {
     }
 
     @ExceptionHandler(ConstraintViolationException.class)
-    ResponseEntity handleBindErrors(ConstraintViolationException exception, HttpServletRequest request){
+    ResponseEntity handleBindErrors(ConstraintViolationException exception, HttpServletRequest request, HttpServletResponse response) throws IOException {
+
+
 
         List errorList = exception.getConstraintViolations().stream()
                 .map(fieldError -> {
@@ -46,11 +52,11 @@ public class GlobalControllerExceptionHandler {
                     errorMap.put(fieldError.getPropertyPath().toString(), fieldError.getMessage());
                     return errorMap;
                 }).toList();
+        response.sendError(HttpStatus.BAD_REQUEST.value(), errorList.toString());
 
         ErrorModel errorModel = ErrorModel.builder()
                 .timestamp(LocalDate.now())
                 .status(HttpStatus.BAD_REQUEST)
-                .errorMessage("Bad request")
                 .message(errorList.toString())
                 .path(request.getRequestURI())
                 .build();

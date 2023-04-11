@@ -5,6 +5,7 @@ import com.example.appointmentservice.dto.AppointmentRequest;
 import com.example.appointmentservice.services.AppointmentDetailService;
 import com.example.appointmentservice.services.AppointmentService;
 import com.example.appointmentservice.services.AppointmentViewService;
+import jakarta.validation.executable.ValidateOnExecution;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.http.HttpStatus;
@@ -37,8 +38,9 @@ public class AppointmentController {
         AppointmentDto appointmentDto = appointmentService.createNewAppointment( appointmentRequest );
         return new ResponseEntity<>(appointmentDto, HttpStatus.CREATED);
     }
+
     @PutMapping("/book-appointment")
-    public ResponseEntity<AppointmentDto> bookAppointment(Long clientId, Long appointmentId, @Validated String details){
+    public ResponseEntity<AppointmentDto> bookAppointment(Long clientId, Long appointmentId,  String details){
         AppointmentDto appointmentDto = appointmentService.bookAppointment(clientId, appointmentId, details);
         return new ResponseEntity<>(appointmentDto, HttpStatus.OK);
     }
