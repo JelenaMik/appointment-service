@@ -1,7 +1,6 @@
 package com.example.appointmentservice.controllers;
 
 import com.example.appointmentservice.dto.AppointmentDetailDto;
-import com.example.appointmentservice.dto.AppointmentDto;
 import com.example.appointmentservice.services.AppointmentDetailService;
 import com.example.appointmentservice.services.AppointmentService;
 import lombok.RequiredArgsConstructor;

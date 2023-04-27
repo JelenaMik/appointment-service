@@ -69,11 +69,6 @@ public class AppointmentController {
         return new ResponseEntity<>(appointments, HttpStatus.OK);
     }
 
-//    @GetMapping("/appointments/{week}")
-//    public ResponseEntity<Map<LocalDateTime, AppointmentDto>> getAppointmentsWithNulls(@PathVariable Integer week, String role, Long userId){
-//        Map<LocalDateTime, AppointmentDto> appointments = appointmentViewService.getListOfAppointmentsWithNulls(week, role, userId);
-//        return new ResponseEntity<>(appointments, HttpStatus.OK);
-//    }
     @GetMapping("/{id}")
     public ResponseEntity<AppointmentDto> getAppointmentById(@PathVariable Long id){
         return new ResponseEntity<>(appointmentViewService.getAppointmentById(id), HttpStatus.OK);
