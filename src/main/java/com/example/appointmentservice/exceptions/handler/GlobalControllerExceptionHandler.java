@@ -8,10 +8,8 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.validation.ConstraintViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.transaction.TransactionSystemException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
-import org.springframework.web.servlet.ModelAndView;
 
 import java.io.IOException;
 import java.time.LocalDate;
@@ -23,9 +21,9 @@ import java.util.Map;
 public class GlobalControllerExceptionHandler {
     @ExceptionHandler(AppointmentNotFoundException.class)
     protected ResponseEntity handleConflict(AppointmentNotFoundException e, HttpServletRequest request){
-        ErrorModel errorModel = new ErrorModel(LocalDate.now(), HttpStatus.BAD_REQUEST,
+        ErrorModel errorModel = new ErrorModel(LocalDate.now(), HttpStatus.NOT_FOUND,
                 "Bad Request", "No appointment was found", request.getRequestURI());
-        return new ResponseEntity<>(errorModel, HttpStatus.BAD_REQUEST);
+        return new ResponseEntity<>(errorModel, HttpStatus.NOT_FOUND);
     }
     @ExceptionHandler(BookingTimeOverlapping.class)
     protected ResponseEntity handleConflict(BookingTimeOverlapping e, HttpServletRequest request){
