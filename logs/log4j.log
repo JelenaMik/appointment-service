@@ -7,358 +7,738 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.0.4)
 
-2023-03-27T17:04:58.321+03:00  INFO 27252 --- [  restartedMain] c.e.a.AppointmentServiceApplication      : Starting AppointmentServiceApplication using Java 18.0.2 with PID 27252 (C:\Users\jelena.mikelsone\Documents\appointments\appointment-service\target\classes started by jelena.mikelsone in C:\Users\jelena.mikelsone\Documents\appointments\appointment-service)
-2023-03-27T17:04:58.325+03:00  INFO 27252 --- [  restartedMain] c.e.a.AppointmentServiceApplication      : No active profile set, falling back to 1 default profile: "default"
-2023-03-27T17:04:58.387+03:00  INFO 27252 --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-03-27T17:04:58.387+03:00  INFO 27252 --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-03-27T17:04:59.912+03:00  INFO 27252 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-03-27T17:05:00.109+03:00  INFO 27252 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 189 ms. Found 2 JPA repository interfaces.
-2023-03-27T17:05:00.517+03:00  INFO 27252 --- [  restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d61e94c2-2df3-3ad5-9889-974d241439bd
-2023-03-27T17:05:01.261+03:00  INFO 27252 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8103 (http)
-2023-03-27T17:05:01.272+03:00  INFO 27252 --- [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-03-27T17:05:01.272+03:00  INFO 27252 --- [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
-2023-03-27T17:05:01.365+03:00  INFO 27252 --- [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-03-27T17:05:01.366+03:00  INFO 27252 --- [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2978 ms
-2023-03-27T17:05:01.523+03:00  INFO 27252 --- [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-03-27T17:05:01.597+03:00  INFO 27252 --- [  restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
-2023-03-27T17:05:01.953+03:00  INFO 27252 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-03-27T17:05:02.269+03:00  INFO 27252 --- [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@8a0e9b7
-2023-03-27T17:05:02.271+03:00  INFO 27252 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-03-27T17:05:02.355+03:00  INFO 27252 --- [  restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-2023-03-27T17:05:02.707+03:00  INFO 27252 --- [  restartedMain] o.h.c.beanvalidation.TypeSafeActivator   : Error calling `jakarta.validation.Validation#buildDefaultValidatorFactory`
+2023-05-16T11:05:52.128+03:00  INFO 25460 --- [  restartedMain] c.e.a.AppointmentServiceApplication      : Starting AppointmentServiceApplication using Java 18.0.2 with PID 25460 (C:\Users\jelena.mikelsone\Documents\appointments\appointment-service\target\classes started by jelena.mikelsone in C:\Users\jelena.mikelsone\Documents\appointments\appointment-service)
+2023-05-16T11:05:52.138+03:00  INFO 25460 --- [  restartedMain] c.e.a.AppointmentServiceApplication      : No active profile set, falling back to 1 default profile: "default"
+2023-05-16T11:05:52.265+03:00  INFO 25460 --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-05-16T11:05:52.266+03:00  INFO 25460 --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-05-16T11:05:55.518+03:00  INFO 25460 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-16T11:05:55.761+03:00  INFO 25460 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 219 ms. Found 3 JPA repository interfaces.
+2023-05-16T11:05:57.595+03:00  INFO 25460 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8103 (http)
+2023-05-16T11:05:57.621+03:00  INFO 25460 --- [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-05-16T11:05:57.622+03:00  INFO 25460 --- [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-05-16T11:05:57.807+03:00  INFO 25460 --- [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-05-16T11:05:57.810+03:00  INFO 25460 --- [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5540 ms
+2023-05-16T11:05:58.112+03:00  INFO 25460 --- [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-16T11:05:58.225+03:00  INFO 25460 --- [  restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-05-16T11:05:58.889+03:00  INFO 25460 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-05-16T11:05:59.495+03:00  INFO 25460 --- [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7b748ba6
+2023-05-16T11:05:59.500+03:00  INFO 25460 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-05-16T11:05:59.638+03:00  INFO 25460 --- [  restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-05-16T11:06:01.615+03:00  INFO 25460 --- [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-16T11:06:01.635+03:00  INFO 25460 --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-16T11:06:03.310+03:00  WARN 25460 --- [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-05-16T11:06:05.647+03:00  INFO 25460 --- [  restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4cb72626, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@57e6e5ed, org.springframework.security.web.context.SecurityContextHolderFilter@48fa409, org.springframework.security.web.header.HeaderWriterFilter@42bbf3dd, org.springframework.security.web.authentication.logout.LogoutFilter@3d1366e3, com.example.appointmentservice.config.JwtAuthenticationFilter@2fc2a571, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@26f44367, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@cf5673a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@65e7309c, org.springframework.security.web.session.SessionManagementFilter@7fbfc513, org.springframework.security.web.access.ExceptionTranslationFilter@6f760e04, org.springframework.security.web.access.intercept.AuthorizationFilter@5808784d]
+2023-05-16T11:06:06.082+03:00  WARN 25460 --- [  restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2023-05-16T11:06:06.538+03:00  WARN 25460 --- [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2023-05-16T11:06:06.686+03:00  INFO 25460 --- [  restartedMain] o.a.k.clients.admin.AdminClientConfig    : AdminClientConfig values: 
+	bootstrap.servers = [localhost:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
 
-jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
-	at jakarta.validation.Validation$GenericBootstrapImpl.configure(Validation.java:291) ~[jakarta.validation-api-3.0.2.jar:na]
-	at jakarta.validation.Validation.buildDefaultValidatorFactory(Validation.java:103) ~[jakarta.validation-api-3.0.2.jar:na]
-	at org.hibernate.cfg.beanvalidation.TypeSafeActivator.getValidatorFactory(TypeSafeActivator.java:479) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
-	at org.hibernate.cfg.beanvalidation.TypeSafeActivator.activate(TypeSafeActivator.java:82) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
-	at org.hibernate.cfg.beanvalidation.BeanValidationIntegrator.integrate(BeanValidationIntegrator.java:137) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
-	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:287) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
-	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:415) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1423) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-6.0.6.jar:6.0.6]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376) ~[spring-orm-6.0.6.jar:6.0.6]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.0.6.jar:6.0.6]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.0.6.jar:6.0.6]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352) ~[spring-orm-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1808) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1758) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1132) ~[spring-context-6.0.6.jar:6.0.6]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:907) ~[spring-context-6.0.6.jar:6.0.6]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584) ~[spring-context-6.0.6.jar:6.0.6]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.4.jar:3.0.4]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-3.0.4.jar:3.0.4]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-3.0.4.jar:3.0.4]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310) ~[spring-boot-3.0.4.jar:3.0.4]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304) ~[spring-boot-3.0.4.jar:3.0.4]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293) ~[spring-boot-3.0.4.jar:3.0.4]
-	at com.example.appointmentservice.AppointmentServiceApplication.main(AppointmentServiceApplication.java:10) ~[classes/:na]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-3.0.4.jar:3.0.4]
+2023-05-16T11:06:06.830+03:00  INFO 25460 --- [  restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.3.2
+2023-05-16T11:06:06.830+03:00  INFO 25460 --- [  restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: b66af662e61082cb
+2023-05-16T11:06:06.830+03:00  INFO 25460 --- [  restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1684224366827
+2023-05-16T11:06:07.467+03:00  INFO 25460 --- [| adminclient-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.admin.client for adminclient-1 unregistered
+2023-05-16T11:06:07.475+03:00  INFO 25460 --- [| adminclient-1] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2023-05-16T11:06:07.475+03:00  INFO 25460 --- [| adminclient-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-05-16T11:06:07.475+03:00  INFO 25460 --- [| adminclient-1] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2023-05-16T11:06:07.495+03:00  INFO 25460 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8103 (http) with context path ''
+2023-05-16T11:06:07.542+03:00  INFO 25460 --- [  restartedMain] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-groupId-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = groupId
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
 
-2023-03-27T17:05:03.443+03:00  INFO 27252 --- [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-03-27T17:05:03.456+03:00  INFO 27252 --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-03-27T17:05:04.187+03:00  WARN 27252 --- [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-03-27T17:05:06.611+03:00  WARN 27252 --- [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
-2023-03-27T17:05:06.754+03:00  INFO 27252 --- [  restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
-2023-03-27T17:05:06.907+03:00  WARN 27252 --- [  restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2023-03-27T17:05:06.978+03:00  INFO 27252 --- [  restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2023-03-27T17:05:07.031+03:00  INFO 27252 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2023-03-27T17:05:07.038+03:00  INFO 27252 --- [  restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2023-03-27T17:05:07.072+03:00  INFO 27252 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2023-03-27T17:05:07.073+03:00  INFO 27252 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2023-03-27T17:05:07.073+03:00  INFO 27252 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2023-03-27T17:05:07.073+03:00  INFO 27252 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2023-03-27T17:05:07.073+03:00  INFO 27252 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2023-03-27T17:05:07.073+03:00  INFO 27252 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2023-03-27T17:05:07.073+03:00  INFO 27252 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2023-03-27T17:05:07.547+03:00  INFO 27252 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2023-03-27T17:05:07.550+03:00  INFO 27252 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2023-03-27T17:05:07.555+03:00  INFO 27252 --- [  restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2023-03-27T17:05:07.561+03:00  INFO 27252 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1679925907560 with initial instances count: 2
-2023-03-27T17:05:07.564+03:00  INFO 27252 --- [  restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application APPOINTMENT-SERVICE with eureka with status UP
-2023-03-27T17:05:07.565+03:00  INFO 27252 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1679925907565, current=UP, previous=STARTING]
-2023-03-27T17:05:07.567+03:00  INFO 27252 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_APPOINTMENT-SERVICE/LVAGPLTP5030.dir.svc.accenture.com:appointment-service:8103: registering service...
-2023-03-27T17:05:07.603+03:00  INFO 27252 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8103 (http) with context path ''
-2023-03-27T17:05:07.604+03:00  INFO 27252 --- [  restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8103
-2023-03-27T17:05:07.625+03:00  INFO 27252 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_APPOINTMENT-SERVICE/LVAGPLTP5030.dir.svc.accenture.com:appointment-service:8103 - registration status: 204
-2023-03-27T17:05:07.712+03:00  INFO 27252 --- [  restartedMain] c.e.a.AppointmentServiceApplication      : Started AppointmentServiceApplication in 10.03 seconds (process running for 11.56)
-2023-03-27T17:10:07.079+03:00  INFO 27252 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2023-03-27T17:11:36.664+03:00  INFO 27252 --- [nio-8103-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-03-27T17:11:36.664+03:00  INFO 27252 --- [nio-8103-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-03-27T17:11:36.666+03:00  INFO 27252 --- [nio-8103-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2023-03-27T17:11:36.714+03:00  INFO 27252 --- [nio-8103-exec-1] c.e.a.s.impl.AppointmentViewServiceImpl  : 13
-2023-03-27T17:11:36.766+03:00  INFO 27252 --- [nio-8103-exec-1] c.e.a.s.impl.AppointmentViewServiceImpl  : 2023-03-27T00:00
-2023-03-27T17:11:36.766+03:00  INFO 27252 --- [nio-8103-exec-1] c.e.a.s.impl.AppointmentViewServiceImpl  : 2023-04-02T23:59:59
+2023-05-16T11:06:07.603+03:00  INFO 25460 --- [  restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.3.2
+2023-05-16T11:06:07.603+03:00  INFO 25460 --- [  restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: b66af662e61082cb
+2023-05-16T11:06:07.603+03:00  INFO 25460 --- [  restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1684224367602
+2023-05-16T11:06:07.605+03:00  INFO 25460 --- [  restartedMain] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-groupId-1, groupId=groupId] Subscribed to topic(s): test
+2023-05-16T11:06:07.615+03:00  INFO 25460 --- [  restartedMain] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-groupId-2
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = groupId
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2023-05-16T11:06:07.622+03:00  INFO 25460 --- [  restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.3.2
+2023-05-16T11:06:07.622+03:00  INFO 25460 --- [  restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: b66af662e61082cb
+2023-05-16T11:06:07.622+03:00  INFO 25460 --- [  restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1684224367622
+2023-05-16T11:06:07.622+03:00  INFO 25460 --- [  restartedMain] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-groupId-2, groupId=groupId] Subscribed to topic(s): response
+2023-05-16T11:06:07.630+03:00  INFO 25460 --- [ntainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-groupId-1, groupId=groupId] Resetting the last seen epoch of partition test-0 to 0 since the associated topicId changed from null to npfA-CB2RI63dcP-EoRtTQ
+2023-05-16T11:06:07.630+03:00  INFO 25460 --- [ntainer#1-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-groupId-2, groupId=groupId] Resetting the last seen epoch of partition response-0 to 0 since the associated topicId changed from null to xwYNvJaKT-qWRZtYPy9ofw
+2023-05-16T11:06:07.632+03:00  INFO 25460 --- [ntainer#1-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-groupId-2, groupId=groupId] Cluster ID: oT2RWnWoTuC-uNNZnATMXg
+2023-05-16T11:06:07.632+03:00  INFO 25460 --- [ntainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-groupId-1, groupId=groupId] Cluster ID: oT2RWnWoTuC-uNNZnATMXg
+2023-05-16T11:06:07.632+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Discovered group coordinator LVAGPLTP5030.dir.svc.accenture.com:9092 (id: 2147483647 rack: null)
+2023-05-16T11:06:07.632+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] Discovered group coordinator LVAGPLTP5030.dir.svc.accenture.com:9092 (id: 2147483647 rack: null)
+2023-05-16T11:06:07.635+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] (Re-)joining group
+2023-05-16T11:06:07.635+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] (Re-)joining group
+2023-05-16T11:06:07.637+03:00  INFO 25460 --- [  restartedMain] c.e.a.AppointmentServiceApplication      : Started AppointmentServiceApplication in 16.433 seconds (process running for 20.259)
+2023-05-16T11:06:07.663+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Request joining group due to: need to re-join with the given member-id: consumer-groupId-1-4d79ed84-7e2c-4355-9492-cec9e5f80622
+2023-05-16T11:06:07.664+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+2023-05-16T11:06:07.664+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] Request joining group due to: need to re-join with the given member-id: consumer-groupId-2-b7ed1359-3e57-4193-b80b-684f14030755
+2023-05-16T11:06:07.664+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] (Re-)joining group
+2023-05-16T11:06:07.664+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+2023-05-16T11:06:07.664+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] (Re-)joining group
+2023-05-16T11:06:07.672+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Successfully joined group with generation Generation{generationId=8, memberId='consumer-groupId-1-4d79ed84-7e2c-4355-9492-cec9e5f80622', protocol='range'}
+2023-05-16T11:06:07.672+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] Successfully joined group with generation Generation{generationId=8, memberId='consumer-groupId-2-b7ed1359-3e57-4193-b80b-684f14030755', protocol='range'}
+2023-05-16T11:06:07.677+03:00  INFO 25460 --- [ntainer#1-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-groupId-2, groupId=groupId] Resetting the last seen epoch of partition test-0 to 0 since the associated topicId changed from null to npfA-CB2RI63dcP-EoRtTQ
+2023-05-16T11:06:07.680+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] Finished assignment for group at generation 8: {consumer-groupId-1-4d79ed84-7e2c-4355-9492-cec9e5f80622=Assignment(partitions=[test-0]), consumer-groupId-2-b7ed1359-3e57-4193-b80b-684f14030755=Assignment(partitions=[response-0])}
+2023-05-16T11:06:07.699+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Successfully synced group in generation Generation{generationId=8, memberId='consumer-groupId-1-4d79ed84-7e2c-4355-9492-cec9e5f80622', protocol='range'}
+2023-05-16T11:06:07.700+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] Successfully synced group in generation Generation{generationId=8, memberId='consumer-groupId-2-b7ed1359-3e57-4193-b80b-684f14030755', protocol='range'}
+2023-05-16T11:06:07.700+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Notifying assignor about the new Assignment(partitions=[test-0])
+2023-05-16T11:06:07.700+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] Notifying assignor about the new Assignment(partitions=[response-0])
+2023-05-16T11:06:07.705+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] Adding newly assigned partitions: response-0
+2023-05-16T11:06:07.705+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Adding newly assigned partitions: test-0
+2023-05-16T11:06:07.718+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] Setting offset for partition response-0 to the committed offset FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[LVAGPLTP5030.dir.svc.accenture.com:9092 (id: 0 rack: null)], epoch=0}}
+2023-05-16T11:06:07.718+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Setting offset for partition test-0 to the committed offset FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[LVAGPLTP5030.dir.svc.accenture.com:9092 (id: 0 rack: null)], epoch=0}}
+2023-05-16T11:06:07.719+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : groupId: partitions assigned: [response-0]
+2023-05-16T11:06:07.719+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : groupId: partitions assigned: [test-0]
+2023-05-16T11:15:07.957+03:00  INFO 25460 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-1, groupId=groupId] Node -1 disconnected.
+2023-05-16T11:15:07.957+03:00  INFO 25460 --- [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-2, groupId=groupId] Node -1 disconnected.
+2023-05-16T11:18:46.448+03:00  INFO 25460 --- [nio-8103-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-16T11:18:46.448+03:00  INFO 25460 --- [nio-8103-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-05-16T11:18:46.450+03:00  INFO 25460 --- [nio-8103-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from user u1_0 where u1_0.email=?
+2023-05-16T11:18:46.706+03:00  INFO 25460 --- [nio-8103-exec-1] c.e.a.s.impl.AppointmentViewServiceImpl  : 20
+2023-05-16T11:18:46.747+03:00  INFO 25460 --- [nio-8103-exec-1] c.e.a.s.impl.AppointmentViewServiceImpl  : 2023-05-15T00:00
+2023-05-16T11:18:46.747+03:00  INFO 25460 --- [nio-8103-exec-1] c.e.a.s.impl.AppointmentViewServiceImpl  : 2023-05-21T23:59:59
+Hibernate: select a1_0.appointment_id,a1_0.appointment_type,a1_0.client_id,a1_0.details,a1_0.provider_id,a1_0.start_time from appointments a1_0 where a1_0.client_id=? and a1_0.start_time>=? and a1_0.start_time<=? order by a1_0.start_time asc
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from user u1_0 where u1_0.email=?
+2023-05-16T11:18:52.903+03:00  INFO 25460 --- [nio-8103-exec-2] c.e.a.s.impl.AppointmentViewServiceImpl  : 20
+2023-05-16T11:18:52.903+03:00  INFO 25460 --- [nio-8103-exec-2] c.e.a.s.impl.AppointmentViewServiceImpl  : 2023-05-15T00:00
+2023-05-16T11:18:52.903+03:00  INFO 25460 --- [nio-8103-exec-2] c.e.a.s.impl.AppointmentViewServiceImpl  : 2023-05-21T23:59:59
 Hibernate: select a1_0.appointment_id,a1_0.appointment_type,a1_0.client_id,a1_0.details,a1_0.provider_id,a1_0.start_time from appointments a1_0 where a1_0.provider_id=? and a1_0.start_time>=? and a1_0.start_time<=? order by a1_0.start_time asc
-2023-03-27T17:13:41.079+03:00  INFO 27252 --- [nio-8103-exec-3] c.e.a.s.impl.AppointmentViewServiceImpl  : 13
-2023-03-27T17:13:41.079+03:00  INFO 27252 --- [nio-8103-exec-3] c.e.a.s.impl.AppointmentViewServiceImpl  : 2023-03-27T00:00
-2023-03-27T17:13:41.079+03:00  INFO 27252 --- [nio-8103-exec-3] c.e.a.s.impl.AppointmentViewServiceImpl  : 2023-04-02T23:59:59
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from user u1_0 where u1_0.email=?
+Hibernate: select a1_0.appointment_id,a1_0.appointment_type,a1_0.client_id,a1_0.details,a1_0.provider_id,a1_0.start_time from appointments a1_0 where a1_0.appointment_id=?
+2023-05-16T11:18:55.085+03:00  INFO 25460 --- [nio-8103-exec-3] c.e.a.s.impl.AppointmentServiceImpl      : app was found
+Hibernate: select a1_0.appointment_id from appointments a1_0 where a1_0.client_id=? and a1_0.start_time=? limit ?
+Hibernate: update appointments set appointment_type=?, client_id=?, details=?, provider_id=?, start_time=? where appointment_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from user u1_0 where u1_0.email=?
+2023-05-16T11:18:55.157+03:00  INFO 25460 --- [nio-8103-exec-4] c.e.a.s.impl.AppointmentViewServiceImpl  : 20
+2023-05-16T11:18:55.158+03:00  INFO 25460 --- [nio-8103-exec-4] c.e.a.s.impl.AppointmentViewServiceImpl  : 2023-05-15T00:00
+2023-05-16T11:18:55.158+03:00  INFO 25460 --- [nio-8103-exec-4] c.e.a.s.impl.AppointmentViewServiceImpl  : 2023-05-21T23:59:59
 Hibernate: select a1_0.appointment_id,a1_0.appointment_type,a1_0.client_id,a1_0.details,a1_0.provider_id,a1_0.start_time from appointments a1_0 where a1_0.provider_id=? and a1_0.start_time>=? and a1_0.start_time<=? order by a1_0.start_time asc
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from user u1_0 where u1_0.email=?
+2023-05-16T11:18:56.521+03:00  INFO 25460 --- [nio-8103-exec-5] c.e.a.s.impl.AppointmentViewServiceImpl  : 20
+2023-05-16T11:18:56.521+03:00  INFO 25460 --- [nio-8103-exec-5] c.e.a.s.impl.AppointmentViewServiceImpl  : 2023-05-15T00:00
+2023-05-16T11:18:56.521+03:00  INFO 25460 --- [nio-8103-exec-5] c.e.a.s.impl.AppointmentViewServiceImpl  : 2023-05-21T23:59:59
+Hibernate: select a1_0.appointment_id,a1_0.appointment_type,a1_0.client_id,a1_0.details,a1_0.provider_id,a1_0.start_time from appointments a1_0 where a1_0.client_id=? and a1_0.start_time>=? and a1_0.start_time<=? order by a1_0.start_time asc
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from user u1_0 where u1_0.email=?
 Hibernate: select a1_0.appointment_id,a1_0.appointment_type,a1_0.client_id,a1_0.details,a1_0.provider_id,a1_0.start_time from appointments a1_0 where a1_0.appointment_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from user u1_0 where u1_0.email=?
 Hibernate: select a1_0.appointment_detail_id,a1_0.appointment_id,a1_0.created,a1_0.status from appointment_details a1_0 where a1_0.appointment_id=?
-2023-03-27T17:15:07.086+03:00  INFO 27252 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from user u1_0 where u1_0.email=?
 Hibernate: select a1_0.appointment_id,a1_0.appointment_type,a1_0.client_id,a1_0.details,a1_0.provider_id,a1_0.start_time from appointments a1_0 where a1_0.appointment_id=?
-Hibernate: select a1_0.appointment_detail_id,a1_0.appointment_id,a1_0.created,a1_0.status from appointment_details a1_0 where a1_0.appointment_id=?
-2023-03-27T17:16:59.338+03:00  INFO 27252 --- [nio-8103-exec-9] c.e.a.s.impl.AppointmentViewServiceImpl  : 13
-2023-03-27T17:16:59.339+03:00  INFO 27252 --- [nio-8103-exec-9] c.e.a.s.impl.AppointmentViewServiceImpl  : 2023-03-27T00:00
-2023-03-27T17:16:59.339+03:00  INFO 27252 --- [nio-8103-exec-9] c.e.a.s.impl.AppointmentViewServiceImpl  : 2023-04-02T23:59:59
-Hibernate: select a1_0.appointment_id,a1_0.appointment_type,a1_0.client_id,a1_0.details,a1_0.provider_id,a1_0.start_time from appointments a1_0 where a1_0.provider_id=? and a1_0.start_time>=? and a1_0.start_time<=? order by a1_0.start_time asc
+Hibernate: update appointments set appointment_type=?, client_id=?, details=?, provider_id=?, start_time=? where appointment_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from user u1_0 where u1_0.email=?
 Hibernate: select a1_0.appointment_id,a1_0.appointment_type,a1_0.client_id,a1_0.details,a1_0.provider_id,a1_0.start_time from appointments a1_0 where a1_0.appointment_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from user u1_0 where u1_0.email=?
 Hibernate: select a1_0.appointment_detail_id,a1_0.appointment_id,a1_0.created,a1_0.status from appointment_details a1_0 where a1_0.appointment_id=?
-2023-03-27T17:17:02.305+03:00  INFO 27252 --- [nio-8103-exec-2] c.e.a.s.impl.AppointmentViewServiceImpl  : 13
-2023-03-27T17:17:02.306+03:00  INFO 27252 --- [nio-8103-exec-2] c.e.a.s.impl.AppointmentViewServiceImpl  : 2023-03-27T00:00
-2023-03-27T17:17:02.306+03:00  INFO 27252 --- [nio-8103-exec-2] c.e.a.s.impl.AppointmentViewServiceImpl  : 2023-04-02T23:59:59
-Hibernate: select a1_0.appointment_id,a1_0.appointment_type,a1_0.client_id,a1_0.details,a1_0.provider_id,a1_0.start_time from appointments a1_0 where a1_0.provider_id=? and a1_0.start_time>=? and a1_0.start_time<=? order by a1_0.start_time asc
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from user u1_0 where u1_0.email=?
+2023-05-16T11:19:03.754+03:00  INFO 25460 --- [nio-8103-exec-1] c.e.a.s.impl.AppointmentViewServiceImpl  : 20
+2023-05-16T11:19:03.754+03:00  INFO 25460 --- [nio-8103-exec-1] c.e.a.s.impl.AppointmentViewServiceImpl  : 2023-05-15T00:00
+2023-05-16T11:19:03.754+03:00  INFO 25460 --- [nio-8103-exec-1] c.e.a.s.impl.AppointmentViewServiceImpl  : 2023-05-21T23:59:59
+Hibernate: select a1_0.appointment_id,a1_0.appointment_type,a1_0.client_id,a1_0.details,a1_0.provider_id,a1_0.start_time from appointments a1_0 where a1_0.client_id=? and a1_0.start_time>=? and a1_0.start_time<=? order by a1_0.start_time asc
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from user u1_0 where u1_0.email=?
 Hibernate: select a1_0.appointment_id,a1_0.appointment_type,a1_0.client_id,a1_0.details,a1_0.provider_id,a1_0.start_time from appointments a1_0 where a1_0.appointment_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from user u1_0 where u1_0.email=?
 Hibernate: select a1_0.appointment_detail_id,a1_0.appointment_id,a1_0.created,a1_0.status from appointment_details a1_0 where a1_0.appointment_id=?
-2023-03-27T17:18:13.060+03:00  INFO 27252 --- [nio-8103-exec-6] c.e.a.s.impl.AppointmentViewServiceImpl  : 13
-2023-03-27T17:18:13.061+03:00  INFO 27252 --- [nio-8103-exec-6] c.e.a.s.impl.AppointmentViewServiceImpl  : 2023-03-27T00:00
-2023-03-27T17:18:13.061+03:00  INFO 27252 --- [nio-8103-exec-6] c.e.a.s.impl.AppointmentViewServiceImpl  : 2023-04-02T23:59:59
-Hibernate: select a1_0.appointment_id,a1_0.appointment_type,a1_0.client_id,a1_0.details,a1_0.provider_id,a1_0.start_time from appointments a1_0 where a1_0.provider_id=? and a1_0.start_time>=? and a1_0.start_time<=? order by a1_0.start_time asc
-2023-03-27T17:20:07.080+03:00  INFO 27252 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2023-03-27T17:23:33.111+03:00  INFO 27252 --- [nio-8103-exec-8] c.e.a.s.impl.AppointmentViewServiceImpl  : 13
-2023-03-27T17:23:33.111+03:00  INFO 27252 --- [nio-8103-exec-8] c.e.a.s.impl.AppointmentViewServiceImpl  : 2023-03-27T00:00
-2023-03-27T17:23:33.111+03:00  INFO 27252 --- [nio-8103-exec-8] c.e.a.s.impl.AppointmentViewServiceImpl  : 2023-04-02T23:59:59
-Hibernate: select a1_0.appointment_id,a1_0.appointment_type,a1_0.client_id,a1_0.details,a1_0.provider_id,a1_0.start_time from appointments a1_0 where a1_0.provider_id=? and a1_0.start_time>=? and a1_0.start_time<=? order by a1_0.start_time asc
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from user u1_0 where u1_0.email=?
+2023-05-16T11:19:07.868+03:00  INFO 25460 --- [nio-8103-exec-4] c.e.a.s.impl.AppointmentViewServiceImpl  : 20
+2023-05-16T11:19:07.868+03:00  INFO 25460 --- [nio-8103-exec-4] c.e.a.s.impl.AppointmentViewServiceImpl  : 2023-05-15T00:00
+2023-05-16T11:19:07.868+03:00  INFO 25460 --- [nio-8103-exec-4] c.e.a.s.impl.AppointmentViewServiceImpl  : 2023-05-21T23:59:59
+Hibernate: select a1_0.appointment_id,a1_0.appointment_type,a1_0.client_id,a1_0.details,a1_0.provider_id,a1_0.start_time from appointments a1_0 where a1_0.client_id=? and a1_0.start_time>=? and a1_0.start_time<=? order by a1_0.start_time asc
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from user u1_0 where u1_0.email=?
 Hibernate: select a1_0.appointment_id,a1_0.appointment_type,a1_0.client_id,a1_0.details,a1_0.provider_id,a1_0.start_time from appointments a1_0 where a1_0.appointment_id=?
-Hibernate: select a1_0.appointment_detail_id,a1_0.appointment_id,a1_0.created,a1_0.status from appointment_details a1_0 where a1_0.appointment_id=?
-2023-03-27T17:25:07.088+03:00  INFO 27252 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-Hibernate: select a1_0.appointment_id,a1_0.appointment_type,a1_0.client_id,a1_0.details,a1_0.provider_id,a1_0.start_time from appointments a1_0 where a1_0.appointment_id=?
-Hibernate: select a1_0.appointment_detail_id,a1_0.appointment_id,a1_0.created,a1_0.status from appointment_details a1_0 where a1_0.appointment_id=?
-Hibernate: select a1_0.appointment_id,a1_0.appointment_type,a1_0.client_id,a1_0.details,a1_0.provider_id,a1_0.start_time from appointments a1_0 where a1_0.appointment_id=?
-Hibernate: select a1_0.appointment_detail_id,a1_0.appointment_id,a1_0.created,a1_0.status from appointment_details a1_0 where a1_0.appointment_id=?
-2023-03-27T17:29:27.451+03:00  INFO 27252 --- [nio-8103-exec-7] c.e.a.s.impl.AppointmentViewServiceImpl  : 13
-2023-03-27T17:29:27.452+03:00  INFO 27252 --- [nio-8103-exec-7] c.e.a.s.impl.AppointmentViewServiceImpl  : 2023-03-27T00:00
-2023-03-27T17:29:27.452+03:00  INFO 27252 --- [nio-8103-exec-7] c.e.a.s.impl.AppointmentViewServiceImpl  : 2023-04-02T23:59:59
-Hibernate: select a1_0.appointment_id,a1_0.appointment_type,a1_0.client_id,a1_0.details,a1_0.provider_id,a1_0.start_time from appointments a1_0 where a1_0.provider_id=? and a1_0.start_time>=? and a1_0.start_time<=? order by a1_0.start_time asc
-2023-03-27T17:30:07.093+03:00  INFO 27252 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2023-03-27T17:35:07.101+03:00  INFO 27252 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2023-03-27T17:40:07.117+03:00  INFO 27252 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2023-03-27T17:45:07.117+03:00  INFO 27252 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2023-03-27T17:50:07.131+03:00  INFO 27252 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2023-03-27T17:55:07.097+03:00  INFO 27252 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2023-03-27T18:00:07.071+03:00  INFO 27252 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2023-03-27T18:00:15.412+03:00  INFO 27252 --- [   File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (0 additions, 2 deletions, 0 modifications)
-2023-03-27T18:00:15.421+03:00  INFO 27252 --- [       Thread-1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application APPOINTMENT-SERVICE with eureka with status DOWN
-2023-03-27T18:00:15.422+03:00  INFO 27252 --- [       Thread-1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1679929215422, current=DOWN, previous=UP]
-2023-03-27T18:00:15.422+03:00  INFO 27252 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_APPOINTMENT-SERVICE/LVAGPLTP5030.dir.svc.accenture.com:appointment-service:8103: registering service...
-2023-03-27T18:00:15.444+03:00  INFO 27252 --- [       Thread-1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2023-03-27T18:00:15.447+03:00  INFO 27252 --- [       Thread-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
-2023-03-27T18:00:15.461+03:00  INFO 27252 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_APPOINTMENT-SERVICE/LVAGPLTP5030.dir.svc.accenture.com:appointment-service:8103 - registration status: 204
-2023-03-27T18:00:15.470+03:00  INFO 27252 --- [       Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-03-27T18:00:15.484+03:00  INFO 27252 --- [       Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-03-27T18:00:15.491+03:00  INFO 27252 --- [       Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2023-03-27T18:00:15.491+03:00  INFO 27252 --- [       Thread-1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
-2023-03-27T18:00:18.497+03:00  INFO 27252 --- [       Thread-1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
-2023-03-27T18:00:18.505+03:00  INFO 27252 --- [       Thread-1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_APPOINTMENT-SERVICE/LVAGPLTP5030.dir.svc.accenture.com:appointment-service:8103 - deregister  status: 200
-2023-03-27T18:00:18.512+03:00  INFO 27252 --- [       Thread-1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+Hibernate: update appointments set appointment_type=?, client_id=?, details=?, provider_id=?, start_time=? where appointment_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from user u1_0 where u1_0.email=?
+2023-05-16T11:19:09.346+03:00  INFO 25460 --- [nio-8103-exec-6] c.e.a.s.impl.AppointmentViewServiceImpl  : 20
+2023-05-16T11:19:09.346+03:00  INFO 25460 --- [nio-8103-exec-6] c.e.a.s.impl.AppointmentViewServiceImpl  : 2023-05-15T00:00
+2023-05-16T11:19:09.346+03:00  INFO 25460 --- [nio-8103-exec-6] c.e.a.s.impl.AppointmentViewServiceImpl  : 2023-05-21T23:59:59
+Hibernate: select a1_0.appointment_id,a1_0.appointment_type,a1_0.client_id,a1_0.details,a1_0.provider_id,a1_0.start_time from appointments a1_0 where a1_0.client_id=? and a1_0.start_time>=? and a1_0.start_time<=? order by a1_0.start_time asc
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from user u1_0 where u1_0.email=?
+2023-05-16T11:19:10.439+03:00  INFO 25460 --- [nio-8103-exec-7] c.e.a.s.impl.AppointmentViewServiceImpl  : 20
+2023-05-16T11:19:10.439+03:00  INFO 25460 --- [nio-8103-exec-7] c.e.a.s.impl.AppointmentViewServiceImpl  : 2023-05-15T00:00
+2023-05-16T11:19:10.439+03:00  INFO 25460 --- [nio-8103-exec-7] c.e.a.s.impl.AppointmentViewServiceImpl  : 2023-05-21T23:59:59
+Hibernate: select a1_0.appointment_id,a1_0.appointment_type,a1_0.client_id,a1_0.details,a1_0.provider_id,a1_0.start_time from appointments a1_0 where a1_0.client_id=? and a1_0.start_time>=? and a1_0.start_time<=? order by a1_0.start_time asc
+2023-05-16T14:16:35.099+03:00  INFO 25460 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-1, groupId=groupId] Node 2147483647 disconnected.
+2023-05-16T14:16:39.052+03:00  INFO 25460 --- [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-2, groupId=groupId] Node 0 disconnected.
+2023-05-16T14:16:39.058+03:00  INFO 25460 --- [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-2, groupId=groupId] Cancelled in-flight FETCH request with correlation id 17888 due to node 0 being disconnected (elapsed time since creation: 3604531ms, elapsed time since send: 3604531ms, request timeout: 30000ms)
+2023-05-16T14:16:41.724+03:00  INFO 25460 --- [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-2, groupId=groupId] Node 2147483647 disconnected.
+2023-05-16T14:16:41.738+03:00  INFO 25460 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-1, groupId=groupId] Disconnecting from node 0 due to request timeout.
+2023-05-16T14:16:41.739+03:00  INFO 25460 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-1, groupId=groupId] Cancelled in-flight FETCH request with correlation id 17890 due to node 0 being disconnected (elapsed time since creation: 3600574ms, elapsed time since send: 3600574ms, request timeout: 30000ms)
+2023-05-16T14:16:41.740+03:00  INFO 25460 --- [hread | groupId] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] Group coordinator LVAGPLTP5030.dir.svc.accenture.com:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2023-05-16T14:16:41.741+03:00  INFO 25460 --- [hread | groupId] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] Requesting disconnect from last known coordinator LVAGPLTP5030.dir.svc.accenture.com:9092 (id: 2147483647 rack: null)
+2023-05-16T14:16:41.743+03:00  INFO 25460 --- [hread | groupId] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Group coordinator LVAGPLTP5030.dir.svc.accenture.com:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2023-05-16T14:16:41.746+03:00  INFO 25460 --- [hread | groupId] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Requesting disconnect from last known coordinator LVAGPLTP5030.dir.svc.accenture.com:9092 (id: 2147483647 rack: null)
+2023-05-16T14:16:52.789+03:00  INFO 25460 --- [hread | groupId] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] Discovered group coordinator LVAGPLTP5030.dir.svc.accenture.com:9092 (id: 2147483647 rack: null)
+2023-05-16T14:16:52.892+03:00  WARN 25460 --- [hread | groupId] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] consumer poll timeout has expired. This means the time between subsequent calls to poll() was longer than the configured max.poll.interval.ms, which typically implies that the poll loop is spending too much time processing messages. You can address this either by increasing max.poll.interval.ms or by reducing the maximum size of batches returned in poll() with max.poll.records.
+2023-05-16T14:16:52.893+03:00  INFO 25460 --- [hread | groupId] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] Member consumer-groupId-2-b7ed1359-3e57-4193-b80b-684f14030755 sending LeaveGroup request to coordinator LVAGPLTP5030.dir.svc.accenture.com:9092 (id: 2147483647 rack: null) due to consumer poll timeout has expired.
+2023-05-16T14:16:57.009+03:00  INFO 25460 --- [hread | groupId] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Discovered group coordinator LVAGPLTP5030.dir.svc.accenture.com:9092 (id: 2147483647 rack: null)
+2023-05-16T14:16:46.505+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.kafka.clients.FetchSessionHandler    : [Consumer clientId=consumer-groupId-2, groupId=groupId] Error sending fetch request (sessionId=1694301021, epoch=15249) to node 0:
 
-  .   ____          _            __ _ _
- /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
-( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
- \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
-  '  |____| .__|_| |_|_| |_\__, | / / / /
- =========|_|==============|___/=/_/_/_/
- :: Spring Boot ::                (v3.0.4)
+org.apache.kafka.common.errors.DisconnectException: null
 
-2023-03-27T18:00:18.971+03:00  INFO 27252 --- [  restartedMain] c.e.a.AppointmentServiceApplication      : Starting AppointmentServiceApplication using Java 18.0.2 with PID 27252 (C:\Users\jelena.mikelsone\Documents\appointments\appointment-service\target\classes started by jelena.mikelsone in C:\Users\jelena.mikelsone\Documents\appointments\appointment-service)
-2023-03-27T18:00:18.971+03:00  INFO 27252 --- [  restartedMain] c.e.a.AppointmentServiceApplication      : No active profile set, falling back to 1 default profile: "default"
-2023-03-27T18:00:19.830+03:00  INFO 27252 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-03-27T18:00:19.868+03:00  INFO 27252 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 37 ms. Found 2 JPA repository interfaces.
-2023-03-27T18:00:20.043+03:00  INFO 27252 --- [  restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d61e94c2-2df3-3ad5-9889-974d241439bd
-2023-03-27T18:00:20.225+03:00  INFO 27252 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8103 (http)
-2023-03-27T18:00:20.226+03:00  INFO 27252 --- [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-03-27T18:00:20.226+03:00  INFO 27252 --- [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
-2023-03-27T18:00:20.334+03:00  INFO 27252 --- [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-03-27T18:00:20.335+03:00  INFO 27252 --- [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1359 ms
-2023-03-27T18:00:20.388+03:00  INFO 27252 --- [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-03-27T18:00:20.398+03:00  INFO 27252 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-2023-03-27T18:00:20.420+03:00  INFO 27252 --- [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@780695bf
-2023-03-27T18:00:20.420+03:00  INFO 27252 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-2023-03-27T18:00:20.421+03:00  INFO 27252 --- [  restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-2023-03-27T18:00:20.441+03:00  INFO 27252 --- [  restartedMain] o.h.c.beanvalidation.TypeSafeActivator   : Error calling `jakarta.validation.Validation#buildDefaultValidatorFactory`
+2023-05-16T14:16:46.531+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.a.kafka.clients.FetchSessionHandler    : [Consumer clientId=consumer-groupId-1, groupId=groupId] Error sending fetch request (sessionId=543692814, epoch=15252) to node 0:
 
-jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
-	at jakarta.validation.Validation$GenericBootstrapImpl.configure(Validation.java:291) ~[jakarta.validation-api-3.0.2.jar:na]
-	at jakarta.validation.Validation.buildDefaultValidatorFactory(Validation.java:103) ~[jakarta.validation-api-3.0.2.jar:na]
-	at org.hibernate.cfg.beanvalidation.TypeSafeActivator.getValidatorFactory(TypeSafeActivator.java:479) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
-	at org.hibernate.cfg.beanvalidation.TypeSafeActivator.activate(TypeSafeActivator.java:82) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
-	at org.hibernate.cfg.beanvalidation.BeanValidationIntegrator.integrate(BeanValidationIntegrator.java:137) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
-	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:287) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
-	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:415) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1423) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-6.0.6.jar:6.0.6]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376) ~[spring-orm-6.0.6.jar:6.0.6]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.0.6.jar:6.0.6]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.0.6.jar:6.0.6]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352) ~[spring-orm-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1808) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1758) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1132) ~[spring-context-6.0.6.jar:6.0.6]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:907) ~[spring-context-6.0.6.jar:6.0.6]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584) ~[spring-context-6.0.6.jar:6.0.6]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.4.jar:3.0.4]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-3.0.4.jar:3.0.4]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-3.0.4.jar:3.0.4]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310) ~[spring-boot-3.0.4.jar:3.0.4]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304) ~[spring-boot-3.0.4.jar:3.0.4]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293) ~[spring-boot-3.0.4.jar:3.0.4]
-	at com.example.appointmentservice.AppointmentServiceApplication.main(AppointmentServiceApplication.java:10) ~[classes/:na]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-3.0.4.jar:3.0.4]
+org.apache.kafka.common.errors.DisconnectException: null
 
-2023-03-27T18:00:20.489+03:00  INFO 27252 --- [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-03-27T18:00:20.490+03:00  INFO 27252 --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-03-27T18:00:20.680+03:00  WARN 27252 --- [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-03-27T18:00:22.641+03:00  INFO 27252 --- [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-03-27T18:00:22.847+03:00  INFO 27252 --- [  restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
-2023-03-27T18:00:23.051+03:00  WARN 27252 --- [  restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2023-03-27T18:00:23.094+03:00  INFO 27252 --- [  restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2023-03-27T18:00:23.102+03:00  INFO 27252 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2023-03-27T18:00:23.102+03:00  INFO 27252 --- [  restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2023-03-27T18:00:23.130+03:00  INFO 27252 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2023-03-27T18:00:23.131+03:00  INFO 27252 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2023-03-27T18:00:23.131+03:00  INFO 27252 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2023-03-27T18:00:23.131+03:00  INFO 27252 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2023-03-27T18:00:23.131+03:00  INFO 27252 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2023-03-27T18:00:23.131+03:00  INFO 27252 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2023-03-27T18:00:23.131+03:00  INFO 27252 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2023-03-27T18:00:23.198+03:00  INFO 27252 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2023-03-27T18:00:23.200+03:00  INFO 27252 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2023-03-27T18:00:23.201+03:00  INFO 27252 --- [  restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2023-03-27T18:00:23.204+03:00  INFO 27252 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1679929223204 with initial instances count: 1
-2023-03-27T18:00:23.207+03:00  INFO 27252 --- [  restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application APPOINTMENT-SERVICE with eureka with status UP
-2023-03-27T18:00:23.207+03:00  INFO 27252 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1679929223207, current=UP, previous=STARTING]
-2023-03-27T18:00:23.207+03:00  INFO 27252 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_APPOINTMENT-SERVICE/LVAGPLTP5030.dir.svc.accenture.com:appointment-service:8103: registering service...
-2023-03-27T18:00:23.213+03:00  INFO 27252 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8103 (http) with context path ''
-2023-03-27T18:00:23.214+03:00  INFO 27252 --- [  restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8103
-2023-03-27T18:00:23.224+03:00  INFO 27252 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_APPOINTMENT-SERVICE/LVAGPLTP5030.dir.svc.accenture.com:appointment-service:8103 - registration status: 204
-2023-03-27T18:00:23.350+03:00  INFO 27252 --- [  restartedMain] c.e.a.AppointmentServiceApplication      : Started AppointmentServiceApplication in 4.597 seconds (process running for 3327.319)
-2023-03-27T18:00:23.355+03:00  INFO 27252 --- [  restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2023-03-27T18:00:24.103+03:00  INFO 27252 --- [   File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 3 class path changes (3 additions, 0 deletions, 0 modifications)
-2023-03-27T18:00:24.104+03:00  INFO 27252 --- [      Thread-12] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application APPOINTMENT-SERVICE with eureka with status DOWN
-2023-03-27T18:00:24.104+03:00  INFO 27252 --- [      Thread-12] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1679929224104, current=DOWN, previous=UP]
-2023-03-27T18:00:24.105+03:00  INFO 27252 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_APPOINTMENT-SERVICE/LVAGPLTP5030.dir.svc.accenture.com:appointment-service:8103: registering service...
-2023-03-27T18:00:24.110+03:00  INFO 27252 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_APPOINTMENT-SERVICE/LVAGPLTP5030.dir.svc.accenture.com:appointment-service:8103 - registration status: 204
-2023-03-27T18:00:24.118+03:00  INFO 27252 --- [      Thread-12] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2023-03-27T18:00:24.127+03:00  INFO 27252 --- [      Thread-12] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-03-27T18:00:24.127+03:00  INFO 27252 --- [      Thread-12] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
-2023-03-27T18:00:24.136+03:00  INFO 27252 --- [      Thread-12] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
-2023-03-27T18:00:24.137+03:00  INFO 27252 --- [      Thread-12] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
-2023-03-27T18:00:27.200+03:00  INFO 27252 --- [      Thread-12] com.netflix.discovery.DiscoveryClient    : Unregistering ...
-2023-03-27T18:00:27.243+03:00  INFO 27252 --- [      Thread-12] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_APPOINTMENT-SERVICE/LVAGPLTP5030.dir.svc.accenture.com:appointment-service:8103 - deregister  status: 200
-2023-03-27T18:00:27.246+03:00  INFO 27252 --- [      Thread-12] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2023-05-16T14:17:02.898+03:00  WARN 25460 --- [hread | groupId] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] consumer poll timeout has expired. This means the time between subsequent calls to poll() was longer than the configured max.poll.interval.ms, which typically implies that the poll loop is spending too much time processing messages. You can address this either by increasing max.poll.interval.ms or by reducing the maximum size of batches returned in poll() with max.poll.records.
+2023-05-16T14:17:02.899+03:00  INFO 25460 --- [hread | groupId] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] Discovered group coordinator LVAGPLTP5030.dir.svc.accenture.com:9092 (id: 2147483647 rack: null)
+2023-05-16T14:17:02.899+03:00  INFO 25460 --- [hread | groupId] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Member consumer-groupId-1-4d79ed84-7e2c-4355-9492-cec9e5f80622 sending LeaveGroup request to coordinator LVAGPLTP5030.dir.svc.accenture.com:9092 (id: 2147483647 rack: null) due to consumer poll timeout has expired.
+2023-05-16T14:17:02.902+03:00  INFO 25460 --- [hread | groupId] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Discovered group coordinator LVAGPLTP5030.dir.svc.accenture.com:9092 (id: 2147483647 rack: null)
+2023-05-16T14:17:02.904+03:00  INFO 25460 --- [hread | groupId] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Resetting generation and member id due to: consumer pro-actively leaving the group
+2023-05-16T14:17:02.905+03:00  INFO 25460 --- [hread | groupId] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Request joining group due to: consumer pro-actively leaving the group
+2023-05-16T14:17:02.984+03:00  INFO 25460 --- [hread | groupId] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] Resetting generation and member id due to: consumer pro-actively leaving the group
+2023-05-16T14:17:02.985+03:00  INFO 25460 --- [hread | groupId] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] Request joining group due to: consumer pro-actively leaving the group
+2023-05-16T14:17:30.021+03:00  WARN 25460 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h56s67ms774탎200ns).
+2023-05-16T14:17:30.241+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Giving away all assigned partitions as lost since generation/memberID has been reset,indicating that consumer is in old state or no longer part of the group
+2023-05-16T14:17:30.244+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Lost previously assigned partitions test-0
+2023-05-16T14:17:30.359+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] Giving away all assigned partitions as lost since generation/memberID has been reset,indicating that consumer is in old state or no longer part of the group
+2023-05-16T14:17:30.362+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] Lost previously assigned partitions response-0
+2023-05-16T14:17:30.492+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : groupId: partitions lost: [test-0]
+2023-05-16T14:17:30.497+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : groupId: partitions revoked: [test-0]
+2023-05-16T14:17:30.868+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : groupId: partitions lost: [response-0]
+2023-05-16T14:17:30.869+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : groupId: partitions revoked: [response-0]
+2023-05-16T14:17:35.268+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] (Re-)joining group
+2023-05-16T14:17:35.268+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] (Re-)joining group
+2023-05-16T14:17:35.283+03:00  INFO 25460 --- [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-2, groupId=groupId] Disconnecting from node 2147483647 due to request timeout.
+2023-05-16T14:17:35.283+03:00  INFO 25460 --- [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-2, groupId=groupId] Cancelled in-flight API_VERSIONS request with correlation id 17894 due to node 2147483647 being disconnected (elapsed time since creation: 32384ms, elapsed time since send: 32384ms, request timeout: 30000ms)
+2023-05-16T14:17:35.284+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] Group coordinator LVAGPLTP5030.dir.svc.accenture.com:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: null. isDisconnected: true. Rediscovery will be attempted.
+2023-05-16T14:17:35.287+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] Request joining group due to: rebalance failed due to 'null' (DisconnectException)
+2023-05-16T14:17:35.288+03:00  INFO 25460 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-1, groupId=groupId] Disconnecting from node 0 due to request timeout.
+2023-05-16T14:17:35.288+03:00  INFO 25460 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-1, groupId=groupId] Cancelled in-flight FIND_COORDINATOR request with correlation id 17896 due to node 0 being disconnected (elapsed time since creation: 41990ms, elapsed time since send: 38283ms, request timeout: 30000ms)
+2023-05-16T14:17:35.290+03:00  INFO 25460 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-1, groupId=groupId] Disconnecting from node 2147483647 due to request timeout.
+2023-05-16T14:17:35.291+03:00  INFO 25460 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-1, groupId=groupId] Cancelled in-flight API_VERSIONS request with correlation id 17898 due to node 2147483647 being disconnected (elapsed time since creation: 32384ms, elapsed time since send: 32384ms, request timeout: 30000ms)
+2023-05-16T14:17:35.291+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Discovered group coordinator LVAGPLTP5030.dir.svc.accenture.com:9092 (id: 2147483647 rack: null)
+2023-05-16T14:17:35.293+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Group coordinator LVAGPLTP5030.dir.svc.accenture.com:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: null. isDisconnected: true. Rediscovery will be attempted.
+2023-05-16T14:17:35.296+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Request joining group due to: rebalance failed due to 'null' (DisconnectException)
+2023-05-16T14:17:35.925+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] Discovered group coordinator LVAGPLTP5030.dir.svc.accenture.com:9092 (id: 2147483647 rack: null)
+2023-05-16T14:17:35.929+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Discovered group coordinator LVAGPLTP5030.dir.svc.accenture.com:9092 (id: 2147483647 rack: null)
+2023-05-16T14:17:35.931+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] (Re-)joining group
+2023-05-16T14:17:35.935+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] (Re-)joining group
+2023-05-16T14:17:36.294+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Request joining group due to: need to re-join with the given member-id: consumer-groupId-1-9471f7dd-e226-446c-a491-e8f80dbdcfab
+2023-05-16T14:17:36.297+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+2023-05-16T14:17:36.298+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] (Re-)joining group
+2023-05-16T14:17:36.608+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] Request joining group due to: need to re-join with the given member-id: consumer-groupId-2-9c59c3c0-0a64-4812-b44a-0f6cf7d135bb
+2023-05-16T14:17:36.612+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+2023-05-16T14:17:36.612+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] (Re-)joining group
+2023-05-16T14:17:42.511+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] Successfully joined group with generation Generation{generationId=10, memberId='consumer-groupId-2-9c59c3c0-0a64-4812-b44a-0f6cf7d135bb', protocol='range'}
+2023-05-16T14:17:42.520+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Successfully joined group with generation Generation{generationId=10, memberId='consumer-groupId-1-9471f7dd-e226-446c-a491-e8f80dbdcfab', protocol='range'}
+2023-05-16T14:17:42.534+03:00  INFO 25460 --- [ntainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-groupId-1, groupId=groupId] Resetting the last seen epoch of partition response-0 to 0 since the associated topicId changed from null to xwYNvJaKT-qWRZtYPy9ofw
+2023-05-16T14:17:58.521+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Finished assignment for group at generation 10: {consumer-groupId-2-9c59c3c0-0a64-4812-b44a-0f6cf7d135bb=Assignment(partitions=[response-0]), consumer-groupId-1-9471f7dd-e226-446c-a491-e8f80dbdcfab=Assignment(partitions=[test-0])}
+2023-05-16T14:17:58.545+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Successfully synced group in generation Generation{generationId=10, memberId='consumer-groupId-1-9471f7dd-e226-446c-a491-e8f80dbdcfab', protocol='range'}
+2023-05-16T14:17:58.549+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Notifying assignor about the new Assignment(partitions=[test-0])
+2023-05-16T14:17:58.550+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Adding newly assigned partitions: test-0
+2023-05-16T14:17:58.550+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] Successfully synced group in generation Generation{generationId=10, memberId='consumer-groupId-2-9c59c3c0-0a64-4812-b44a-0f6cf7d135bb', protocol='range'}
+2023-05-16T14:17:58.552+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] Request joining group due to: cached metadata has changed from (version3: {test=1, response=1}) at the beginning of the rebalance to (version31: {response=1})
+2023-05-16T14:17:58.560+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] Notifying assignor about the new Assignment(partitions=[response-0])
+2023-05-16T14:17:58.561+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] Adding newly assigned partitions: response-0
+2023-05-16T14:17:58.653+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Setting offset for partition test-0 to the committed offset FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[LVAGPLTP5030.dir.svc.accenture.com:9092 (id: 0 rack: null)], epoch=0}}
+2023-05-16T14:17:58.655+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : groupId: partitions assigned: [test-0]
+2023-05-16T14:17:59.434+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] Setting offset for partition response-0 to the committed offset FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[LVAGPLTP5030.dir.svc.accenture.com:9092 (id: 0 rack: null)], epoch=0}}
+2023-05-16T14:17:59.551+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : groupId: partitions assigned: [response-0]
+2023-05-16T14:17:59.607+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] Revoke previously assigned partitions response-0
+2023-05-16T14:17:59.608+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : groupId: partitions revoked: [response-0]
+2023-05-16T14:17:59.609+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] (Re-)joining group
+2023-05-16T14:18:00.538+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] Successfully joined group with generation Generation{generationId=10, memberId='consumer-groupId-2-9c59c3c0-0a64-4812-b44a-0f6cf7d135bb', protocol='range'}
+2023-05-16T14:18:00.573+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] Successfully synced group in generation Generation{generationId=10, memberId='consumer-groupId-2-9c59c3c0-0a64-4812-b44a-0f6cf7d135bb', protocol='range'}
+2023-05-16T14:18:00.575+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] Notifying assignor about the new Assignment(partitions=[response-0])
+2023-05-16T14:18:08.780+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] Adding newly assigned partitions: response-0
+2023-05-16T14:18:08.794+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] Setting offset for partition response-0 to the committed offset FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[LVAGPLTP5030.dir.svc.accenture.com:9092 (id: 0 rack: null)], epoch=0}}
+2023-05-16T14:18:08.795+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : groupId: partitions assigned: [response-0]
+2023-05-16T14:19:44.452+03:00  INFO 25460 --- [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-2, groupId=groupId] Node 0 disconnected.
+2023-05-16T14:19:44.452+03:00  INFO 25460 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-1, groupId=groupId] Node 0 disconnected.
+2023-05-16T14:19:44.452+03:00  INFO 25460 --- [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-2, groupId=groupId] Cancelled in-flight FETCH request with correlation id 18133 due to node 0 being disconnected (elapsed time since creation: 304ms, elapsed time since send: 304ms, request timeout: 30000ms)
+2023-05-16T14:19:44.452+03:00  INFO 25460 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-1, groupId=groupId] Cancelled in-flight FETCH request with correlation id 18149 due to node 0 being disconnected (elapsed time since creation: 455ms, elapsed time since send: 455ms, request timeout: 30000ms)
+2023-05-16T14:19:44.452+03:00  INFO 25460 --- [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-2, groupId=groupId] Node 2147483647 disconnected.
+2023-05-16T14:19:44.452+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.a.kafka.clients.FetchSessionHandler    : [Consumer clientId=consumer-groupId-1, groupId=groupId] Error sending fetch request (sessionId=320662893, epoch=203) to node 0:
 
-  .   ____          _            __ _ _
- /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
-( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
- \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
-  '  |____| .__|_| |_|_| |_\__, | / / / /
- =========|_|==============|___/=/_/_/_/
- :: Spring Boot ::                (v3.0.4)
+org.apache.kafka.common.errors.DisconnectException: null
 
-2023-03-27T18:00:31.656+03:00  INFO 27252 --- [  restartedMain] c.e.a.AppointmentServiceApplication      : Starting AppointmentServiceApplication using Java 18.0.2 with PID 27252 (C:\Users\jelena.mikelsone\Documents\appointments\appointment-service\target\classes started by jelena.mikelsone in C:\Users\jelena.mikelsone\Documents\appointments\appointment-service)
-2023-03-27T18:00:31.658+03:00  INFO 27252 --- [  restartedMain] c.e.a.AppointmentServiceApplication      : No active profile set, falling back to 1 default profile: "default"
-2023-03-27T18:00:33.050+03:00  INFO 27252 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-03-27T18:00:33.087+03:00  INFO 27252 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 36 ms. Found 2 JPA repository interfaces.
-2023-03-27T18:00:33.236+03:00  INFO 27252 --- [  restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d61e94c2-2df3-3ad5-9889-974d241439bd
-2023-03-27T18:00:33.401+03:00  INFO 27252 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8103 (http)
-2023-03-27T18:00:33.402+03:00  INFO 27252 --- [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-03-27T18:00:33.402+03:00  INFO 27252 --- [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
-2023-03-27T18:00:33.505+03:00  INFO 27252 --- [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-03-27T18:00:33.505+03:00  INFO 27252 --- [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1839 ms
-2023-03-27T18:00:33.556+03:00  INFO 27252 --- [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-03-27T18:00:33.568+03:00  INFO 27252 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
-2023-03-27T18:00:33.585+03:00  INFO 27252 --- [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@72120a21
-2023-03-27T18:00:33.586+03:00  INFO 27252 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
-2023-03-27T18:00:33.586+03:00  INFO 27252 --- [  restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-2023-03-27T18:00:33.601+03:00  INFO 27252 --- [  restartedMain] o.h.c.beanvalidation.TypeSafeActivator   : Error calling `jakarta.validation.Validation#buildDefaultValidatorFactory`
+2023-05-16T14:19:44.452+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.kafka.clients.FetchSessionHandler    : [Consumer clientId=consumer-groupId-2, groupId=groupId] Error sending fetch request (sessionId=1869459455, epoch=186) to node 0:
 
-jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
-	at jakarta.validation.Validation$GenericBootstrapImpl.configure(Validation.java:291) ~[jakarta.validation-api-3.0.2.jar:na]
-	at jakarta.validation.Validation.buildDefaultValidatorFactory(Validation.java:103) ~[jakarta.validation-api-3.0.2.jar:na]
-	at org.hibernate.cfg.beanvalidation.TypeSafeActivator.getValidatorFactory(TypeSafeActivator.java:479) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
-	at org.hibernate.cfg.beanvalidation.TypeSafeActivator.activate(TypeSafeActivator.java:82) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
-	at org.hibernate.cfg.beanvalidation.BeanValidationIntegrator.integrate(BeanValidationIntegrator.java:137) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
-	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:287) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
-	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:415) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1423) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-6.0.6.jar:6.0.6]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376) ~[spring-orm-6.0.6.jar:6.0.6]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.0.6.jar:6.0.6]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.0.6.jar:6.0.6]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352) ~[spring-orm-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1808) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1758) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1132) ~[spring-context-6.0.6.jar:6.0.6]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:907) ~[spring-context-6.0.6.jar:6.0.6]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584) ~[spring-context-6.0.6.jar:6.0.6]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.4.jar:3.0.4]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-3.0.4.jar:3.0.4]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-3.0.4.jar:3.0.4]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310) ~[spring-boot-3.0.4.jar:3.0.4]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304) ~[spring-boot-3.0.4.jar:3.0.4]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293) ~[spring-boot-3.0.4.jar:3.0.4]
-	at com.example.appointmentservice.AppointmentServiceApplication.main(AppointmentServiceApplication.java:10) ~[classes/:na]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-3.0.4.jar:3.0.4]
+org.apache.kafka.common.errors.DisconnectException: null
 
-2023-03-27T18:00:33.647+03:00  INFO 27252 --- [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-03-27T18:00:33.648+03:00  INFO 27252 --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-03-27T18:00:33.758+03:00  WARN 27252 --- [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-03-27T18:00:34.631+03:00  INFO 27252 --- [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-03-27T18:00:34.780+03:00  INFO 27252 --- [  restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
-2023-03-27T18:00:34.963+03:00  WARN 27252 --- [  restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2023-03-27T18:00:35.004+03:00  INFO 27252 --- [  restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2023-03-27T18:00:35.008+03:00  INFO 27252 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2023-03-27T18:00:35.008+03:00  INFO 27252 --- [  restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2023-03-27T18:00:35.010+03:00  INFO 27252 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2023-03-27T18:00:35.010+03:00  INFO 27252 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2023-03-27T18:00:35.010+03:00  INFO 27252 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2023-03-27T18:00:35.010+03:00  INFO 27252 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2023-03-27T18:00:35.010+03:00  INFO 27252 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2023-03-27T18:00:35.010+03:00  INFO 27252 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2023-03-27T18:00:35.010+03:00  INFO 27252 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2023-03-27T18:00:35.041+03:00  INFO 27252 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2023-03-27T18:00:35.043+03:00  INFO 27252 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2023-03-27T18:00:35.044+03:00  INFO 27252 --- [  restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2023-03-27T18:00:35.046+03:00  INFO 27252 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1679929235046 with initial instances count: 1
-2023-03-27T18:00:35.049+03:00  INFO 27252 --- [  restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application APPOINTMENT-SERVICE with eureka with status UP
-2023-03-27T18:00:35.049+03:00  INFO 27252 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1679929235049, current=UP, previous=STARTING]
-2023-03-27T18:00:35.049+03:00  INFO 27252 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_APPOINTMENT-SERVICE/LVAGPLTP5030.dir.svc.accenture.com:appointment-service:8103: registering service...
-2023-03-27T18:00:35.055+03:00  INFO 27252 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8103 (http) with context path ''
-2023-03-27T18:00:35.056+03:00  INFO 27252 --- [  restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8103
-2023-03-27T18:00:35.065+03:00  INFO 27252 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_APPOINTMENT-SERVICE/LVAGPLTP5030.dir.svc.accenture.com:appointment-service:8103 - registration status: 204
-2023-03-27T18:00:35.237+03:00  INFO 27252 --- [  restartedMain] c.e.a.AppointmentServiceApplication      : Started AppointmentServiceApplication in 7.065 seconds (process running for 3339.207)
-2023-03-27T18:00:35.240+03:00  INFO 27252 --- [  restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2023-03-27T18:05:34.987+03:00  INFO 27252 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2023-03-27T18:10:34.972+03:00  INFO 27252 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2023-03-27T18:15:34.967+03:00  INFO 27252 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-05-16T14:19:44.454+03:00  INFO 25460 --- [hread | groupId] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-1, groupId=groupId] Node 2147483647 disconnected.
+2023-05-16T14:19:44.454+03:00  INFO 25460 --- [hread | groupId] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] Group coordinator LVAGPLTP5030.dir.svc.accenture.com:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: true. Rediscovery will be attempted.
+2023-05-16T14:19:44.454+03:00  INFO 25460 --- [hread | groupId] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Group coordinator LVAGPLTP5030.dir.svc.accenture.com:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: true. Rediscovery will be attempted.
+2023-05-16T14:19:44.560+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] Discovered group coordinator LVAGPLTP5030.dir.svc.accenture.com:9092 (id: 2147483647 rack: null)
+2023-05-16T14:19:44.576+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Discovered group coordinator LVAGPLTP5030.dir.svc.accenture.com:9092 (id: 2147483647 rack: null)
+2023-05-16T14:22:44.151+03:00  INFO 25460 --- [hread | groupId] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Group coordinator LVAGPLTP5030.dir.svc.accenture.com:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2023-05-16T14:22:44.152+03:00  INFO 25460 --- [hread | groupId] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Requesting disconnect from last known coordinator LVAGPLTP5030.dir.svc.accenture.com:9092 (id: 2147483647 rack: null)
+2023-05-16T14:22:44.152+03:00  INFO 25460 --- [hread | groupId] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-1, groupId=groupId] Client requested disconnect from node 2147483647
+2023-05-16T14:22:44.177+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Discovered group coordinator LVAGPLTP5030.dir.svc.accenture.com:9092 (id: 2147483647 rack: null)
+2023-05-16T14:22:44.177+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Group coordinator LVAGPLTP5030.dir.svc.accenture.com:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2023-05-16T14:22:44.177+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Requesting disconnect from last known coordinator LVAGPLTP5030.dir.svc.accenture.com:9092 (id: 2147483647 rack: null)
+2023-05-16T14:22:44.286+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Discovered group coordinator LVAGPLTP5030.dir.svc.accenture.com:9092 (id: 2147483647 rack: null)
+2023-05-16T14:22:44.372+03:00  INFO 25460 --- [hread | groupId] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] Group coordinator LVAGPLTP5030.dir.svc.accenture.com:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2023-05-16T14:22:44.372+03:00  INFO 25460 --- [hread | groupId] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] Requesting disconnect from last known coordinator LVAGPLTP5030.dir.svc.accenture.com:9092 (id: 2147483647 rack: null)
+2023-05-16T14:22:44.372+03:00  INFO 25460 --- [hread | groupId] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-2, groupId=groupId] Client requested disconnect from node 2147483647
+2023-05-16T14:22:44.374+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] Discovered group coordinator LVAGPLTP5030.dir.svc.accenture.com:9092 (id: 2147483647 rack: null)
+2023-05-16T14:22:44.375+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] Group coordinator LVAGPLTP5030.dir.svc.accenture.com:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: true. Rediscovery will be attempted.
+2023-05-16T14:22:44.376+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] Discovered group coordinator LVAGPLTP5030.dir.svc.accenture.com:9092 (id: 2147483647 rack: null)
+2023-05-16T14:22:44.376+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] Group coordinator LVAGPLTP5030.dir.svc.accenture.com:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2023-05-16T14:22:44.376+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] Requesting disconnect from last known coordinator LVAGPLTP5030.dir.svc.accenture.com:9092 (id: 2147483647 rack: null)
+2023-05-16T14:22:44.492+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] Discovered group coordinator LVAGPLTP5030.dir.svc.accenture.com:9092 (id: 2147483647 rack: null)
+2023-05-16T14:22:44.875+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] Attempt to heartbeat with Generation{generationId=10, memberId='consumer-groupId-2-9c59c3c0-0a64-4812-b44a-0f6cf7d135bb', protocol='range'} and group instance id Optional.empty failed due to UNKNOWN_MEMBER_ID, resetting generation
+2023-05-16T14:22:44.875+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] Resetting generation and member id due to: encountered UNKNOWN_MEMBER_ID from HEARTBEAT response
+2023-05-16T14:22:44.875+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] Request joining group due to: encountered UNKNOWN_MEMBER_ID from HEARTBEAT response
+2023-05-16T14:22:44.875+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] Giving away all assigned partitions as lost since generation/memberID has been reset,indicating that consumer is in old state or no longer part of the group
+2023-05-16T14:22:44.875+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] Lost previously assigned partitions response-0
+2023-05-16T14:22:44.875+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : groupId: partitions lost: [response-0]
+2023-05-16T14:22:44.875+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : groupId: partitions revoked: [response-0]
+2023-05-16T14:22:44.875+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] (Re-)joining group
+2023-05-16T14:22:44.957+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] Request joining group due to: need to re-join with the given member-id: consumer-groupId-2-42e89206-c58e-428a-a9bd-553ec5e698d1
+2023-05-16T14:22:44.957+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+2023-05-16T14:22:44.957+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] (Re-)joining group
+2023-05-16T14:22:47.309+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Request joining group due to: group is already rebalancing
+2023-05-16T14:22:47.310+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Revoke previously assigned partitions test-0
+2023-05-16T14:22:47.310+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : groupId: partitions revoked: [test-0]
+2023-05-16T14:22:47.310+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] (Re-)joining group
+2023-05-16T14:22:47.313+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] Successfully joined group with generation Generation{generationId=11, memberId='consumer-groupId-2-42e89206-c58e-428a-a9bd-553ec5e698d1', protocol='range'}
+2023-05-16T14:22:47.313+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Successfully joined group with generation Generation{generationId=11, memberId='consumer-groupId-1-9471f7dd-e226-446c-a491-e8f80dbdcfab', protocol='range'}
+2023-05-16T14:22:47.532+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Finished assignment for group at generation 11: {consumer-groupId-2-42e89206-c58e-428a-a9bd-553ec5e698d1=Assignment(partitions=[response-0]), consumer-groupId-1-9471f7dd-e226-446c-a491-e8f80dbdcfab=Assignment(partitions=[test-0])}
+2023-05-16T14:22:47.538+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Successfully synced group in generation Generation{generationId=11, memberId='consumer-groupId-1-9471f7dd-e226-446c-a491-e8f80dbdcfab', protocol='range'}
+2023-05-16T14:22:47.538+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] Successfully synced group in generation Generation{generationId=11, memberId='consumer-groupId-2-42e89206-c58e-428a-a9bd-553ec5e698d1', protocol='range'}
+2023-05-16T14:22:47.538+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Notifying assignor about the new Assignment(partitions=[test-0])
+2023-05-16T14:22:47.538+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] Notifying assignor about the new Assignment(partitions=[response-0])
+2023-05-16T14:22:47.538+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Adding newly assigned partitions: test-0
+2023-05-16T14:22:47.538+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] Adding newly assigned partitions: response-0
+2023-05-16T14:22:47.540+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] Setting offset for partition response-0 to the committed offset FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[LVAGPLTP5030.dir.svc.accenture.com:9092 (id: 0 rack: null)], epoch=0}}
+2023-05-16T14:22:47.540+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : groupId: partitions assigned: [response-0]
+2023-05-16T14:22:47.542+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Setting offset for partition test-0 to the committed offset FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[LVAGPLTP5030.dir.svc.accenture.com:9092 (id: 0 rack: null)], epoch=0}}
+2023-05-16T14:22:47.542+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : groupId: partitions assigned: [test-0]
+2023-05-16T14:23:13.556+03:00  WARN 25460 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m13s470ms839탎700ns).
+2023-05-16T15:01:50.881+03:00  INFO 25460 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-1, groupId=groupId] Node 2147483647 disconnected.
+2023-05-16T15:01:50.881+03:00  INFO 25460 --- [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-2, groupId=groupId] Node 2147483647 disconnected.
+2023-05-16T15:01:50.885+03:00  INFO 25460 --- [hread | groupId] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] Group coordinator LVAGPLTP5030.dir.svc.accenture.com:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: true. Rediscovery will be attempted.
+2023-05-16T15:01:50.886+03:00  INFO 25460 --- [hread | groupId] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Group coordinator LVAGPLTP5030.dir.svc.accenture.com:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: true. Rediscovery will be attempted.
+2023-05-16T15:01:50.984+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] Discovered group coordinator LVAGPLTP5030.dir.svc.accenture.com:9092 (id: 2147483647 rack: null)
+2023-05-16T15:01:51.126+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Discovered group coordinator LVAGPLTP5030.dir.svc.accenture.com:9092 (id: 2147483647 rack: null)
+2023-05-16T16:21:11.530+03:00  INFO 25460 --- [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-2, groupId=groupId] Node 0 disconnected.
+2023-05-16T16:21:11.530+03:00  INFO 25460 --- [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-2, groupId=groupId] Cancelled in-flight FETCH request with correlation id 31840 due to node 0 being disconnected (elapsed time since creation: 1195401ms, elapsed time since send: 1195401ms, request timeout: 30000ms)
+2023-05-16T16:21:11.530+03:00  INFO 25460 --- [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-2, groupId=groupId] Node 2147483647 disconnected.
+2023-05-16T16:21:11.532+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.kafka.clients.FetchSessionHandler    : [Consumer clientId=consumer-groupId-2, groupId=groupId] Error sending fetch request (sessionId=1905379089, epoch=11681) to node 0:
+
+org.apache.kafka.common.errors.DisconnectException: null
+
+2023-05-16T16:21:11.543+03:00  INFO 25460 --- [hread | groupId] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] Group coordinator LVAGPLTP5030.dir.svc.accenture.com:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: true. Rediscovery will be attempted.
+2023-05-16T16:21:11.603+03:00  INFO 25460 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-1, groupId=groupId] Node 0 disconnected.
+2023-05-16T16:21:11.603+03:00  INFO 25460 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-1, groupId=groupId] Cancelled in-flight FETCH request with correlation id 31860 due to node 0 being disconnected (elapsed time since creation: 1195176ms, elapsed time since send: 1195176ms, request timeout: 30000ms)
+2023-05-16T16:21:11.603+03:00  INFO 25460 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-1, groupId=groupId] Node 2147483647 disconnected.
+2023-05-16T16:21:11.603+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.a.kafka.clients.FetchSessionHandler    : [Consumer clientId=consumer-groupId-1, groupId=groupId] Error sending fetch request (sessionId=1716825547, epoch=11686) to node 0:
+
+org.apache.kafka.common.errors.DisconnectException: null
+
+2023-05-16T16:21:11.605+03:00  INFO 25460 --- [hread | groupId] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Group coordinator LVAGPLTP5030.dir.svc.accenture.com:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: true. Rediscovery will be attempted.
+2023-05-16T16:21:11.721+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Discovered group coordinator LVAGPLTP5030.dir.svc.accenture.com:9092 (id: 2147483647 rack: null)
+2023-05-16T16:21:12.781+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] Discovered group coordinator LVAGPLTP5030.dir.svc.accenture.com:9092 (id: 2147483647 rack: null)
+2023-05-16T16:21:12.870+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Request joining group due to: group is already rebalancing
+2023-05-16T16:21:12.870+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] Attempt to heartbeat with Generation{generationId=11, memberId='consumer-groupId-2-42e89206-c58e-428a-a9bd-553ec5e698d1', protocol='range'} and group instance id Optional.empty failed due to UNKNOWN_MEMBER_ID, resetting generation
+2023-05-16T16:21:12.871+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] Resetting generation and member id due to: encountered UNKNOWN_MEMBER_ID from HEARTBEAT response
+2023-05-16T16:21:12.871+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] Request joining group due to: encountered UNKNOWN_MEMBER_ID from HEARTBEAT response
+2023-05-16T16:21:12.871+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Revoke previously assigned partitions test-0
+2023-05-16T16:21:12.871+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] Giving away all assigned partitions as lost since generation/memberID has been reset,indicating that consumer is in old state or no longer part of the group
+2023-05-16T16:21:12.871+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] Lost previously assigned partitions response-0
+2023-05-16T16:21:12.871+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : groupId: partitions revoked: [test-0]
+2023-05-16T16:21:12.871+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : groupId: partitions lost: [response-0]
+2023-05-16T16:21:12.871+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : groupId: partitions revoked: [response-0]
+2023-05-16T16:21:12.871+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] (Re-)joining group
+2023-05-16T16:21:12.871+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] (Re-)joining group
+2023-05-16T16:21:12.892+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Successfully joined group with generation Generation{generationId=12, memberId='consumer-groupId-1-9471f7dd-e226-446c-a491-e8f80dbdcfab', protocol='range'}
+2023-05-16T16:21:12.892+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Finished assignment for group at generation 12: {consumer-groupId-1-9471f7dd-e226-446c-a491-e8f80dbdcfab=Assignment(partitions=[test-0])}
+2023-05-16T16:21:12.898+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] Request joining group due to: need to re-join with the given member-id: consumer-groupId-2-28451e1a-364e-4f12-a2e3-dfe1a566a298
+2023-05-16T16:21:12.898+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+2023-05-16T16:21:12.898+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] (Re-)joining group
+2023-05-16T16:21:12.919+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Successfully synced group in generation Generation{generationId=12, memberId='consumer-groupId-1-9471f7dd-e226-446c-a491-e8f80dbdcfab', protocol='range'}
+2023-05-16T16:21:12.920+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Notifying assignor about the new Assignment(partitions=[test-0])
+2023-05-16T16:21:12.920+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Adding newly assigned partitions: test-0
+2023-05-16T16:21:12.962+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Setting offset for partition test-0 to the committed offset FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[LVAGPLTP5030.dir.svc.accenture.com:9092 (id: 0 rack: null)], epoch=0}}
+2023-05-16T16:21:12.962+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : groupId: partitions assigned: [test-0]
+2023-05-16T16:21:15.897+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Request joining group due to: group is already rebalancing
+2023-05-16T16:21:15.897+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Revoke previously assigned partitions test-0
+2023-05-16T16:21:15.897+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : groupId: partitions revoked: [test-0]
+2023-05-16T16:21:15.897+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] (Re-)joining group
+2023-05-16T16:21:15.902+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] Successfully joined group with generation Generation{generationId=13, memberId='consumer-groupId-2-28451e1a-364e-4f12-a2e3-dfe1a566a298', protocol='range'}
+2023-05-16T16:21:15.902+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Successfully joined group with generation Generation{generationId=13, memberId='consumer-groupId-1-9471f7dd-e226-446c-a491-e8f80dbdcfab', protocol='range'}
+2023-05-16T16:21:16.390+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Finished assignment for group at generation 13: {consumer-groupId-2-28451e1a-364e-4f12-a2e3-dfe1a566a298=Assignment(partitions=[response-0]), consumer-groupId-1-9471f7dd-e226-446c-a491-e8f80dbdcfab=Assignment(partitions=[test-0])}
+2023-05-16T16:21:16.394+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] Successfully synced group in generation Generation{generationId=13, memberId='consumer-groupId-2-28451e1a-364e-4f12-a2e3-dfe1a566a298', protocol='range'}
+2023-05-16T16:21:16.394+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Successfully synced group in generation Generation{generationId=13, memberId='consumer-groupId-1-9471f7dd-e226-446c-a491-e8f80dbdcfab', protocol='range'}
+2023-05-16T16:21:16.394+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] Notifying assignor about the new Assignment(partitions=[response-0])
+2023-05-16T16:21:16.394+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Notifying assignor about the new Assignment(partitions=[test-0])
+2023-05-16T16:21:16.394+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] Adding newly assigned partitions: response-0
+2023-05-16T16:21:16.394+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Adding newly assigned partitions: test-0
+2023-05-16T16:21:16.396+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Setting offset for partition test-0 to the committed offset FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[LVAGPLTP5030.dir.svc.accenture.com:9092 (id: 0 rack: null)], epoch=0}}
+2023-05-16T16:21:16.396+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] Setting offset for partition response-0 to the committed offset FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[LVAGPLTP5030.dir.svc.accenture.com:9092 (id: 0 rack: null)], epoch=0}}
+2023-05-16T16:21:16.397+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : groupId: partitions assigned: [test-0]
+2023-05-16T16:21:16.397+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : groupId: partitions assigned: [response-0]
+2023-05-16T16:21:39.750+03:00  WARN 25460 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=20m24s932ms529탎800ns).
+2023-05-16T16:36:40.819+03:00  INFO 25460 --- [hread | groupId] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Group coordinator LVAGPLTP5030.dir.svc.accenture.com:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2023-05-16T16:36:40.820+03:00  INFO 25460 --- [hread | groupId] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Requesting disconnect from last known coordinator LVAGPLTP5030.dir.svc.accenture.com:9092 (id: 2147483647 rack: null)
+2023-05-16T16:36:40.820+03:00  INFO 25460 --- [hread | groupId] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] Group coordinator LVAGPLTP5030.dir.svc.accenture.com:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2023-05-16T16:36:40.820+03:00  INFO 25460 --- [hread | groupId] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] Requesting disconnect from last known coordinator LVAGPLTP5030.dir.svc.accenture.com:9092 (id: 2147483647 rack: null)
+2023-05-16T16:36:40.820+03:00  INFO 25460 --- [hread | groupId] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-1, groupId=groupId] Client requested disconnect from node 2147483647
+2023-05-16T16:36:40.820+03:00  INFO 25460 --- [hread | groupId] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-2, groupId=groupId] Client requested disconnect from node 2147483647
+2023-05-16T16:36:40.850+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Discovered group coordinator LVAGPLTP5030.dir.svc.accenture.com:9092 (id: 2147483647 rack: null)
+2023-05-16T16:36:40.850+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Group coordinator LVAGPLTP5030.dir.svc.accenture.com:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2023-05-16T16:36:40.850+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Requesting disconnect from last known coordinator LVAGPLTP5030.dir.svc.accenture.com:9092 (id: 2147483647 rack: null)
+2023-05-16T16:36:40.851+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] Discovered group coordinator LVAGPLTP5030.dir.svc.accenture.com:9092 (id: 2147483647 rack: null)
+2023-05-16T16:36:40.851+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] Group coordinator LVAGPLTP5030.dir.svc.accenture.com:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2023-05-16T16:36:40.851+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] Requesting disconnect from last known coordinator LVAGPLTP5030.dir.svc.accenture.com:9092 (id: 2147483647 rack: null)
+2023-05-16T16:36:40.962+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] Discovered group coordinator LVAGPLTP5030.dir.svc.accenture.com:9092 (id: 2147483647 rack: null)
+2023-05-16T16:36:40.962+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Discovered group coordinator LVAGPLTP5030.dir.svc.accenture.com:9092 (id: 2147483647 rack: null)
+2023-05-16T16:36:55.276+03:00  WARN 25460 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m45s303ms401탎).
+2023-05-16T17:44:23.813+03:00  INFO 25460 --- [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-2, groupId=groupId] Node 0 disconnected.
+2023-05-16T17:44:23.813+03:00  INFO 25460 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-1, groupId=groupId] Node 0 disconnected.
+2023-05-16T17:44:23.815+03:00  INFO 25460 --- [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-2, groupId=groupId] Cancelled in-flight FETCH request with correlation id 42938 due to node 0 being disconnected (elapsed time since creation: 356ms, elapsed time since send: 356ms, request timeout: 30000ms)
+2023-05-16T17:44:23.815+03:00  INFO 25460 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-1, groupId=groupId] Cancelled in-flight FETCH request with correlation id 42971 due to node 0 being disconnected (elapsed time since creation: 262ms, elapsed time since send: 262ms, request timeout: 30000ms)
+2023-05-16T17:44:23.816+03:00  INFO 25460 --- [hread | groupId] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-1, groupId=groupId] Node 2147483647 disconnected.
+2023-05-16T17:44:23.816+03:00  INFO 25460 --- [hread | groupId] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Group coordinator LVAGPLTP5030.dir.svc.accenture.com:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: true. Rediscovery will be attempted.
+2023-05-16T17:44:23.816+03:00  INFO 25460 --- [hread | groupId] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-2, groupId=groupId] Node 2147483647 disconnected.
+2023-05-16T17:44:23.815+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.a.kafka.clients.FetchSessionHandler    : [Consumer clientId=consumer-groupId-1, groupId=groupId] Error sending fetch request (sessionId=12358473, epoch=9463) to node 0:
+
+org.apache.kafka.common.errors.DisconnectException: null
+
+2023-05-16T17:44:23.817+03:00  INFO 25460 --- [hread | groupId] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] Group coordinator LVAGPLTP5030.dir.svc.accenture.com:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: true. Rediscovery will be attempted.
+2023-05-16T17:44:23.816+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.kafka.clients.FetchSessionHandler    : [Consumer clientId=consumer-groupId-2, groupId=groupId] Error sending fetch request (sessionId=1558118375, epoch=9455) to node 0:
+
+org.apache.kafka.common.errors.DisconnectException: null
+
+2023-05-16T17:44:25.961+03:00  INFO 25460 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-1, groupId=groupId] Node 0 disconnected.
+2023-05-16T17:44:25.961+03:00  INFO 25460 --- [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-2, groupId=groupId] Node 0 disconnected.
+2023-05-16T17:44:25.961+03:00  WARN 25460 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-1, groupId=groupId] Connection to node 0 (LVAGPLTP5030.dir.svc.accenture.com/192.168.43.234:9092) could not be established. Broker may not be available.
+2023-05-16T17:44:25.961+03:00  WARN 25460 --- [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-2, groupId=groupId] Connection to node 0 (LVAGPLTP5030.dir.svc.accenture.com/192.168.43.234:9092) could not be established. Broker may not be available.
+2023-05-16T17:44:28.115+03:00  INFO 25460 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-1, groupId=groupId] Node 0 disconnected.
+2023-05-16T17:44:28.115+03:00  INFO 25460 --- [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-2, groupId=groupId] Node 0 disconnected.
+2023-05-16T17:44:28.116+03:00  WARN 25460 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-1, groupId=groupId] Connection to node 0 (LVAGPLTP5030.dir.svc.accenture.com/192.168.43.234:9092) could not be established. Broker may not be available.
+2023-05-16T17:44:28.116+03:00  WARN 25460 --- [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-2, groupId=groupId] Connection to node 0 (LVAGPLTP5030.dir.svc.accenture.com/192.168.43.234:9092) could not be established. Broker may not be available.
+2023-05-16T17:44:28.116+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.a.kafka.clients.FetchSessionHandler    : [Consumer clientId=consumer-groupId-1, groupId=groupId] Error sending fetch request (sessionId=12358473, epoch=INITIAL) to node 0:
+
+org.apache.kafka.common.errors.DisconnectException: null
+
+2023-05-16T17:44:28.116+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.kafka.clients.FetchSessionHandler    : [Consumer clientId=consumer-groupId-2, groupId=groupId] Error sending fetch request (sessionId=1558118375, epoch=INITIAL) to node 0:
+
+org.apache.kafka.common.errors.DisconnectException: null
+
+2023-05-16T17:44:30.386+03:00  INFO 25460 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-1, groupId=groupId] Node 0 disconnected.
+2023-05-16T17:44:30.386+03:00  WARN 25460 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-1, groupId=groupId] Connection to node 0 (LVAGPLTP5030.dir.svc.accenture.com/192.168.43.234:9092) could not be established. Broker may not be available.
+2023-05-16T17:44:30.397+03:00  INFO 25460 --- [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-2, groupId=groupId] Node 0 disconnected.
+2023-05-16T17:44:30.397+03:00  WARN 25460 --- [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-2, groupId=groupId] Connection to node 0 (LVAGPLTP5030.dir.svc.accenture.com/192.168.43.234:9092) could not be established. Broker may not be available.
+2023-05-16T17:44:32.816+03:00  INFO 25460 --- [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-2, groupId=groupId] Node 0 disconnected.
+2023-05-16T17:44:32.816+03:00  WARN 25460 --- [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-2, groupId=groupId] Connection to node 0 (LVAGPLTP5030.dir.svc.accenture.com/192.168.43.234:9092) could not be established. Broker may not be available.
+2023-05-16T17:44:32.816+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.kafka.clients.FetchSessionHandler    : [Consumer clientId=consumer-groupId-2, groupId=groupId] Error sending fetch request (sessionId=1558118375, epoch=INITIAL) to node 0:
+
+org.apache.kafka.common.errors.DisconnectException: null
+
+2023-05-16T17:44:32.863+03:00  INFO 25460 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-1, groupId=groupId] Node 0 disconnected.
+2023-05-16T17:44:32.863+03:00  WARN 25460 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-1, groupId=groupId] Connection to node 0 (LVAGPLTP5030.dir.svc.accenture.com/192.168.43.234:9092) could not be established. Broker may not be available.
+2023-05-16T17:44:32.864+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.a.kafka.clients.FetchSessionHandler    : [Consumer clientId=consumer-groupId-1, groupId=groupId] Error sending fetch request (sessionId=12358473, epoch=INITIAL) to node 0:
+
+org.apache.kafka.common.errors.DisconnectException: null
+
+2023-05-16T17:44:35.655+03:00  INFO 25460 --- [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-2, groupId=groupId] Node 0 disconnected.
+2023-05-16T17:44:35.655+03:00  WARN 25460 --- [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-2, groupId=groupId] Connection to node 0 (LVAGPLTP5030.dir.svc.accenture.com/192.168.43.234:9092) could not be established. Broker may not be available.
+2023-05-16T17:44:35.903+03:00  INFO 25460 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-1, groupId=groupId] Node 0 disconnected.
+2023-05-16T17:44:35.903+03:00  WARN 25460 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-1, groupId=groupId] Connection to node 0 (LVAGPLTP5030.dir.svc.accenture.com/192.168.43.234:9092) could not be established. Broker may not be available.
+2023-05-16T17:44:38.556+03:00  INFO 25460 --- [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-2, groupId=groupId] Node 0 disconnected.
+2023-05-16T17:44:38.556+03:00  WARN 25460 --- [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-2, groupId=groupId] Connection to node 0 (LVAGPLTP5030.dir.svc.accenture.com/192.168.43.234:9092) could not be established. Broker may not be available.
+2023-05-16T17:44:38.556+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.kafka.clients.FetchSessionHandler    : [Consumer clientId=consumer-groupId-2, groupId=groupId] Error sending fetch request (sessionId=1558118375, epoch=INITIAL) to node 0:
+
+org.apache.kafka.common.errors.DisconnectException: null
+
+2023-05-16T17:44:38.994+03:00  INFO 25460 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-1, groupId=groupId] Node 0 disconnected.
+2023-05-16T17:44:38.995+03:00  WARN 25460 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-1, groupId=groupId] Connection to node 0 (LVAGPLTP5030.dir.svc.accenture.com/192.168.43.234:9092) could not be established. Broker may not be available.
+2023-05-16T17:44:38.996+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.a.kafka.clients.FetchSessionHandler    : [Consumer clientId=consumer-groupId-1, groupId=groupId] Error sending fetch request (sessionId=12358473, epoch=INITIAL) to node 0:
+
+org.apache.kafka.common.errors.DisconnectException: null
+
+2023-05-16T17:44:41.503+03:00  INFO 25460 --- [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-2, groupId=groupId] Node 0 disconnected.
+2023-05-16T17:44:41.503+03:00  WARN 25460 --- [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-2, groupId=groupId] Connection to node 0 (LVAGPLTP5030.dir.svc.accenture.com/192.168.43.234:9092) could not be established. Broker may not be available.
+2023-05-16T17:44:42.076+03:00  INFO 25460 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-1, groupId=groupId] Node 0 disconnected.
+2023-05-16T17:44:42.076+03:00  WARN 25460 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-1, groupId=groupId] Connection to node 0 (LVAGPLTP5030.dir.svc.accenture.com/192.168.43.234:9092) could not be established. Broker may not be available.
+2023-05-16T17:44:44.574+03:00  INFO 25460 --- [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-2, groupId=groupId] Node 0 disconnected.
+2023-05-16T17:44:44.574+03:00  WARN 25460 --- [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-2, groupId=groupId] Connection to node 0 (LVAGPLTP5030.dir.svc.accenture.com/192.168.43.234:9092) could not be established. Broker may not be available.
+2023-05-16T17:44:45.088+03:00  INFO 25460 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-1, groupId=groupId] Node 0 disconnected.
+2023-05-16T17:44:45.089+03:00  WARN 25460 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-1, groupId=groupId] Connection to node 0 (LVAGPLTP5030.dir.svc.accenture.com/192.168.43.234:9092) could not be established. Broker may not be available.
+2023-05-16T17:44:47.485+03:00  INFO 25460 --- [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-2, groupId=groupId] Node 0 disconnected.
+2023-05-16T17:44:47.485+03:00  WARN 25460 --- [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-2, groupId=groupId] Connection to node 0 (LVAGPLTP5030.dir.svc.accenture.com/192.168.43.234:9092) could not be established. Broker may not be available.
+2023-05-16T17:44:47.485+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.kafka.clients.FetchSessionHandler    : [Consumer clientId=consumer-groupId-2, groupId=groupId] Error sending fetch request (sessionId=1558118375, epoch=INITIAL) to node 0:
+
+org.apache.kafka.common.errors.DisconnectException: null
+
+2023-05-16T17:44:48.034+03:00  INFO 25460 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-1, groupId=groupId] Node 0 disconnected.
+2023-05-16T17:44:48.034+03:00  WARN 25460 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-1, groupId=groupId] Connection to node 0 (LVAGPLTP5030.dir.svc.accenture.com/192.168.43.234:9092) could not be established. Broker may not be available.
+2023-05-16T17:44:48.034+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.a.kafka.clients.FetchSessionHandler    : [Consumer clientId=consumer-groupId-1, groupId=groupId] Error sending fetch request (sessionId=12358473, epoch=INITIAL) to node 0:
+
+org.apache.kafka.common.errors.DisconnectException: null
+
+2023-05-16T17:44:50.571+03:00  INFO 25460 --- [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-2, groupId=groupId] Node 0 disconnected.
+2023-05-16T17:44:50.571+03:00  WARN 25460 --- [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-2, groupId=groupId] Connection to node 0 (LVAGPLTP5030.dir.svc.accenture.com/192.168.43.234:9092) could not be established. Broker may not be available.
+2023-05-16T17:44:51.241+03:00  INFO 25460 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-1, groupId=groupId] Node 0 disconnected.
+2023-05-16T17:44:51.241+03:00  WARN 25460 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-1, groupId=groupId] Connection to node 0 (LVAGPLTP5030.dir.svc.accenture.com/192.168.43.234:9092) could not be established. Broker may not be available.
+2023-05-16T17:44:51.639+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] Revoke previously assigned partitions response-0
+2023-05-16T17:44:51.639+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Revoke previously assigned partitions test-0
+2023-05-16T17:44:51.639+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : groupId: partitions revoked: [test-0]
+2023-05-16T17:44:51.639+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : groupId: partitions revoked: [response-0]
+2023-05-16T17:44:51.639+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Resetting generation and member id due to: consumer pro-actively leaving the group
+2023-05-16T17:44:51.639+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] Resetting generation and member id due to: consumer pro-actively leaving the group
+2023-05-16T17:44:51.639+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Request joining group due to: consumer pro-actively leaving the group
+2023-05-16T17:44:51.639+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] Request joining group due to: consumer pro-actively leaving the group
+2023-05-16T17:44:51.639+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-groupId-1, groupId=groupId] Unsubscribed all topics or patterns and assigned partitions
+2023-05-16T17:44:51.639+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-groupId-2, groupId=groupId] Unsubscribed all topics or patterns and assigned partitions
+2023-05-16T17:44:51.639+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] Resetting generation and member id due to: consumer pro-actively leaving the group
+2023-05-16T17:44:51.639+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Resetting generation and member id due to: consumer pro-actively leaving the group
+2023-05-16T17:44:51.640+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-2, groupId=groupId] Request joining group due to: consumer pro-actively leaving the group
+2023-05-16T17:44:51.640+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Request joining group due to: consumer pro-actively leaving the group
+2023-05-16T17:44:51.640+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2023-05-16T17:44:51.640+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2023-05-16T17:44:51.640+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-05-16T17:44:51.640+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-05-16T17:44:51.640+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2023-05-16T17:44:51.640+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2023-05-16T17:44:51.642+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-groupId-1 unregistered
+2023-05-16T17:44:51.643+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-groupId-2 unregistered
+2023-05-16T17:44:51.644+03:00  INFO 25460 --- [ntainer#1-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : groupId: Consumer stopped
+2023-05-16T17:44:51.644+03:00  INFO 25460 --- [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : groupId: Consumer stopped
+2023-05-16T17:44:51.698+03:00  INFO 25460 --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-05-16T17:44:51.731+03:00  INFO 25460 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-05-16T17:44:51.743+03:00  INFO 25460 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
